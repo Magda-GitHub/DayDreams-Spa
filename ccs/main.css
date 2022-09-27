@@ -4,25 +4,6 @@
   max-width: 1200px;
 }
 
-.white-block {
-  position: absolute;
-  height: 40px;
-  width: 60%;
-  background-color: #fff;
-}
-.white-block-left {
-  bottom: 0;
-  left: -50px;
-  -webkit-transform: skew(45deg);
-          transform: skew(45deg);
-}
-.white-block-right {
-  top: 0;
-  right: -50px;
-  -webkit-transform: skew(45deg);
-          transform: skew(45deg);
-}
-
 .btn-special-animation {
   position: relative;
   -webkit-transition: backgound-color 0.3s;
@@ -72,6 +53,45 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
+}
+
+.nav {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  background-image: linear-gradient(45deg, rgba(49, 39, 31, 0.96), rgba(42, 30, 21, 0.96));
+  width: 50%;
+  z-index: 120;
+  margin-left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 0.7s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: 0.7s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.nav--activity {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.nav__link {
+  position: relative;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 0.3em 0;
+  padding: 0.5em 2em;
+  font-size: 2.7rem;
+}
+.nav__link:hover {
+  color: #CA965C;
 }
 
 .burger-btn {
@@ -140,7 +160,7 @@ body {
   height: 80vh;
   text-align: center;
   color: #fff;
-  background: linear-gradient(45deg, rgba(168, 88, 30, 0.359), rgba(97, 51, 7, 0.75)), url("../img/wellness-small.jpg");
+  background: linear-gradient(45deg, rgba(71, 61, 54, 0.266), rgba(69, 60, 52, 0.75)), url("../img/stones_small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -159,7 +179,7 @@ body {
   margin-top: 2em;
   padding: 0.8em 1.6em;
   font-size: 1.4rem;
-  background: #fff;
+  background: #dbd3c5;
   border: none;
   border-radius: 5px;
   color: #2e2e2e;
@@ -171,13 +191,41 @@ body {
   background-color: #eee;
 }
 
+.logo {
+  position: absolute;
+  margin: 3% 6%;
+  color: #fff;
+  height: 45vh;
+  z-index: 500;
+}
+.logo__fa-solid {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: block;
+  top: 0;
+  width: 200px;
+  left: 100px;
+}
+
+.p,
+.logo_text {
+  padding: 5% 6%;
+  font-weight: normal;
+  font-size: 1.6rem;
+  margin: 10% -37%;
+}
+
 @media (min-width: 992px) {
   .burger-btn {
     top: 50px;
     right: 50px;
   }
   .header {
-    background-image: linear-gradient(45deg, rgba(168, 88, 30, 0.359), rgba(97, 51, 7, 0.75)), url("../img/wellness-large.jpg");
+    background-image: linear-gradient(45deg, rgba(71, 61, 54, 0.266), rgba(69, 60, 52, 0.75)), url("../img/stones_large.jpg");
   }
   .header__heading {
     font-size: 9rem;

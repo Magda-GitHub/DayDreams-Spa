@@ -1,13 +1,14 @@
 $main-color: #876445;
 $secondary-color: #CA965C;
-$pure-white: #fff;
+$white: #fff;
 $light-white: #eee;
 $dark: #2e2e2e;
 $honey-color: #EEC373;
 $honey-color-hover: #F4DFBA;
+$light-brown: #dbd3c5;
 
 $light-brown-gradient: linear-gradient(45deg,  rgb(200, 118, 41), rgba(150, 80, 10, 0.75));
-$brown-gradient: linear-gradient(45deg, rgba(168, 88, 30, 0.359), rgba(97, 51, 7, 0.75));
+$brown-gradient: linear-gradient(45deg, rgba(71, 61, 54, 0.266), rgba(69, 60, 52, 0.75));
 $coffee-gradient: linear-gradient(45deg, rgba(215, 38, 38, 0.75), rgba(172, 91, 15, 0.75));
-$brown-gradient-solid: linear-gradient(45deg, rgb(186, 87, 17), rgb(97, 51, 7));
+$brown-gradient-solid: linear-gradient(45deg, rgba(49, 39, 31, 0.96), rgb(42, 30, 21, 0.96));
 $light-brown-gradient-solid: radial-gradient(circle at top right, rgb(167, 121, 78) 0%, rgb(239, 204, 171) 100%);
