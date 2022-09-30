@@ -112,7 +112,7 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 2em;
-    height: 80vh;
+    height: 70vh;
     text-align: center;
     color: $white; 
     @include heroImages('../img/stones_small.jpg');
@@ -149,10 +149,11 @@ body {
 
 .logo  {
     position: absolute;
-    margin: 3% 6% ;
+    margin: 5% 11% ;
     color: $white;
-    height: 45vh;
+    height: 40vh;
     z-index: 500;
+
    
     &__fa-solid {
             justify-content: center;
@@ -173,38 +174,100 @@ body {
 }
 
 .main {
-  @include backgroundImage('../img/marble-4700915_640.jpg');
-  background-position: center top;
-  background-attachment: fixed;
-  position: relative;
-  width: 100%;
-  height: 26vh;
 
   &__background{
-    margin: 0 auto;
+    background-image: url('../img/marble-small.jpg');
     width: 100%;
-    max-width: 1200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 53vh;
+    margin: 2em 0.3em 0.5em;
+    padding: 0.2em;
+   
   }
     
         &__title{
             text-align: center;
-            margin: 1.2rem;
-            top: 4%;
-            padding: 7rem 0rem 2rem;
-            text-align: center;
+            margin-bottom: 0.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             display: block;
+            color: $dark;
+            z-index: 6;
         }
         &__text{
-        width: 60%;
+        width: 50%;
         color: $dark;
         text-align: center;
-        margin: 0 20%;
+        margin: 0.2em 0.5em 0;
+        font-family: Dancing script, sans-serif;
+        line-height: 3rem;
+        z-index:6;
+        font-style: 17em;
 
         }
     
     }
-    
 
+    .section__relax {
+        position: relative;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: center;
+        color: $main-color;
+        letter-spacing: 1px;
+        padding: 2.2em 1em 0.5em;
+    }
+
+    .section__padding {
+        padding: 0em 2em;
+    }
+
+    .relax {
+        &__box{
+            display: flex;
+            flex-direction: column;
+            margin: 1.8em 0em;
+        }
+        &__img{
+            width: 100%;
+            margin: 1em;
+        }
+
+        &__title{
+            margin-bottom: 0.7em;
+            
+        }
+        &__text{
+            font-style: 1.3rem;
+            
+        }
+
+        }
+    
+    
+@media(min-width:768px){
+
+  
+    .section__relax{
+        font-style: 0.5em;
+    }
+
+    .section__padding{
+        padding: 0.5em 1em;
+    }
+
+    .main__text {
+        font-style: 20em;
+        margin: 0.8em 3em;
+    }
+}
 @media(min-width: 992px) {
     .burger-btn {
         top: 50px;
@@ -218,5 +281,35 @@ body {
             font-size: 9rem;
             padding: 1.1rem;
         }
+    }
+
+    .main__text {
+        font-style: 28em;
+        margin: 1.3em 4em;
+    }
+
+    .section__relax{
+        font-style: 4.5em;
+    }
+
+    .section__padding {
+        padding: 1em 3em;
+    }
+
+}
+
+@media(min-width: 1200px){
+
+    .main__text {
+        font-style: 35em;
+        margin: 2em 6.5em;
+    }
+
+    .section__relax{
+        font-style: 6em;
+    }
+
+    .section__padding {
+        padding: 2em 4.4em;
     }
 }
