@@ -29,3 +29,31 @@
         transform-origin: left;
     }
 }
+
+.section__relax {
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    color: $main-color;
+    letter-spacing: 1.2px;
+    padding: 1em 1em 0.5em;
+}
+
+.section__padding {
+        padding: 0.7em 1em;
+}
+
+
+@media (min-width: 992px){
+    .section__relax {
+        font-size: 3.5rem;
+    }
+
+
+    .section__padding {
+        padding: 2em 4.3em;
+    }
+}
