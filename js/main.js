@@ -13,4 +13,19 @@ const navigation = () => {
 
 }
 
-navBtn?.addEventListener('click', navigation)
+const burgerBtn = () => {
+    const currentSection = window.scrollY;
+
+    allSections.forEach(section => {
+
+        if (section.classList.contains('light__section') && section.offsetTop <= currentSection + 60) {
+            navBtnBars.classList.add('black__bars')
+        } else if (!section.classList.contains('light__section') && section.offsetTop <= currentSection + 60) {
+            navBtnBars.classList.remove('black__bars')
+        }
+    })
+}
+
+
+navBtn.addEventListener('click', navigation);
+window.addEventListener('scroll', burgerBtn)

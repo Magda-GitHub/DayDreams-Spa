@@ -40,24 +40,24 @@
   position: relative;
   margin-bottom: 1rem;
   font-size: 2rem;
-  font-weight: 500;
   text-transform: uppercase;
   text-align: center;
   color: #5b4531;
   letter-spacing: 1.2px;
-  padding: 1em 1em 0.5em;
+  padding: 1.9em 1em 1.6em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .section__padding {
   padding: 0.7em 1em;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   .section__relax {
-    font-size: 3.5rem;
+    font-size: 2rem;
   }
   .section__padding {
-    padding: 2em 4.3em;
+    padding: 0.5em 0 0 0.5em;
   }
 }
 *,
@@ -156,13 +156,19 @@ body {
 }
 .burger-btn__bars::after {
   top: 13px;
-  width: 60%;
+  width: 70%;
 }
 .burger-btn__bars::before {
   top: 27px;
-  width: 30%;
+  width: 35%;
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
+}
+
+.black__bars,
+.black__bars::after,
+.black__bars::before {
+  background-color: #363131;
 }
 
 .header {
@@ -212,7 +218,7 @@ body {
   cursor: pointer;
 }
 .header__btn::before {
-  background-color: #eee;
+  background-color: rgb(222, 213, 201);
 }
 
 .logo {
@@ -258,13 +264,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 87vh;
+  height: 70vh;
   margin: 2em 0.3em 0;
   padding: 0.2em;
 }
 .main__title {
   text-align: center;
-  margin: 1em;
+  margin: 0.1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -275,19 +281,22 @@ body {
       -ms-flex-align: center;
           align-items: center;
   display: block;
-  color: #363131;
+  color: #5b4531;
   font-weight: bold;
   z-index: 6;
+  letter-spacing: 2px;
+  padding: 0.5em 0.3em;
 }
 .main__text {
-  width: 50%;
+  width: 60%;
   color: #363131;
   text-align: center;
   margin: 0 0.1em;
+  padding: 0.2em 0.1em;
   font-family: Dancing script, sans-serif;
   line-height: 3rem;
   z-index: 6;
-  font-style: 17em;
+  font-style: 18rem;
 }
 
 .relax__box {
@@ -298,19 +307,62 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-bottom: 1em;
 }
 .relax__box__img {
   width: 100%;
-  margin-bottom: 1.7em;
+  margin-bottom: 0.4em;
 }
 .relax__title {
-  margin-bottom: 1.4em;
+  margin-bottom: 0.8em;
+  color: #363131;
 }
 .relax__title__text {
-  font-style: 1.2rem;
+  font-style: 1rem;
+}
+
+.hotel__title {
+  padding: 5em 1em 2em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #5b4531;
+}
+.hotel__description {
+  font-family: Dancing Script, sans-serif;
+  color: #5b4531;
+  padding: 1.4em 0.8em 6em;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.hotel__photo {
+  position: relative;
+  padding: 12em 6em;
+  text-align: center;
+  background: linear-gradient(45deg, rgba(71, 61, 54, 0.266), rgba(69, 60, 52, 0.75)), url("../img/pool_small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  color: rgb(222, 213, 201);
+  font-family: Dancing Script, sans-serif;
+  z-index: 300;
+  text-align: center;
+}
+.hotel__photo__title2 {
+  font-size: 40rem;
 }
 
 @media (min-width: 576px) {
+  .main__background {
+    height: 50vh;
+    margin: 1em 0.3em 1em;
+    padding: 0 0 0.5em;
+  }
+  .main__text {
+    font-style: 15em;
+  }
   .relax__box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -320,16 +372,31 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .relax__box__img {
+    width: 50%;
+    padding: 0.3em 1.2em 0 0.8em;
+  }
+  .relax__box__title {
+    font-size: 2.9rem;
+    margin-bottom: 0.2em;
+  }
+  .relax__box__text {
+    font-size: 1.4rem;
+    padding: 0.3em 1.9em 0.8em 1.2em;
+  }
 }
 @media (min-width: 768px) {
-  .main__text {
+  .nav__link {
+    font-size: 1.8rem;
+  }
+  .nav .main__text {
     font-style: 20em;
     margin: 0.8em 3em;
   }
-  .logo {
+  .nav .logo {
     margin: 4% 8%;
   }
-  .logo__fa-solid {
+  .nav .logo__fa-solid {
     top: 3%;
   }
 }
@@ -343,6 +410,9 @@ body {
   }
   .logo__fa-solid {
     top: 4%;
+  }
+  .nav__link {
+    font-size: 2.2rem;
   }
   .header {
     background-image: linear-gradient(45deg, rgba(71, 61, 54, 0.266), rgba(69, 60, 52, 0.75)), url("../img/stones_large.jpg");

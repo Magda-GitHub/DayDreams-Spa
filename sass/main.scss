@@ -93,15 +93,21 @@ body {
 
 		&::after {
 			top: 13px;
-			width: 60%;
+			width: 70%;
 		}
 
 		&::before {
 			top: 27px;
-			width: 30%;
+			width: 35%;
 			transition-delay: 0.1s;
 		}
 	}
+}
+
+.black__bars,
+.black__bars::after,
+.black__bars::before {
+	background-color: $dark;
 }
 
 .header {
@@ -179,32 +185,34 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		height: 87vh;
+		height: 70vh;
 		margin: 2em 0.3em 0;
 		padding: 0.2em;
 	}
 
 	&__title {
 		text-align: center;
-		margin: 1em;
+		margin: 0.1em;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		display: block;
-		color: $dark;
-        font-weight: bold;
+		color: $main-color;
+		font-weight: bold;
 		z-index: 6;
-       
+        letter-spacing: 2px;
+        padding: 0.5em 0.3em;
 	}
 	&__text {
-		width: 50%;
+		width: 60%;
 		color: $dark;
 		text-align: center;
 		margin: 0 0.1em;
+        padding: 0.2em 0.1em;
 		font-family: Dancing script, sans-serif;
 		line-height: 3rem;
 		z-index: 6;
-		font-style: 17em;
+		font-style: 18rem;
 	}
 }
 
@@ -212,65 +220,136 @@ body {
 	&__box {
 		display: flex;
 		flex-direction: column;
-		
-	&__img {
-		width: 100%;
-		margin-bottom: 1.7em;
-    }
+		margin-bottom: 1em;
+
+		&__img {
+			width: 100%;
+			margin-bottom: 0.4em;
+		}
+	}
+
+	&__title {
+		margin-bottom: 0.8em;
+        color:$dark;
+        
+
+		&__text {
+			font-style: 1rem;
+		}
+	}
 }
+.hotel{
 
-    &__title {
-	    margin-bottom: 1.4em;
+    &__title{
+        padding: 5em 1em 2em;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: $main-color ;
+    }
+    &__description{
+        font-family: Dancing Script, sans-serif;
+        color: $main-color;
+        padding: 1.4em 0.8em 6em;
+        text-align: center;
+        font-size: 2.5rem;
+    }
 
-        &__text{
-            font-style: 1.2rem;
-            }
-	}
-	
-	}
+}
+.hotel__photo  {
+	position: relative;
+    padding: 12em 6em;
+    text-align: center;
+    @include heroImages('../img/pool_small.jpg');
+    overflow: hidden;
+
+       
+    color: $light-white;
+    font-family: Dancing Script, sans-serif;
+    z-index: 300;
+    text-align: center;
+
+    &__title2{
+        font-size: 40rem;
+    }
+        }
 
     
 @media (min-width: 576px) {
+	.main {
+		&__background {
+			height: 50vh;
+			margin: 1em 0.3em 1em;
+			padding: 0 0 0.5em;
+		}
 
-  
+		&__text {
+			font-style: 15em;
+		}
+	}
 
 	.relax {
 		&__box {
 			flex-direction: row;
 			justify-content: space-between;
+
+			&__img {
+				width: 50%;
+				padding: 0.3em 1.2em 0 0.8em;
+			}
+		}
+	}
+	.relax__box {
+		&__title {
+			font-size: 2.9rem;
+			margin-bottom: 0.2em;
 		}
 
-        
+		&__text {
+			font-size: 1.4rem;
+			padding: 0.3em 1.9em 0.8em 1.2em;
+		}
 	}
 }
+
 @media (min-width: 768px) {
-	.main__text {
-		font-style: 20em;
-		margin: 0.8em 3em;
+	.nav {
+		&__link {
+			font-size: 1.8rem;
+		}
+		.main__text {
+			font-style: 20em;
+			margin: 0.8em 3em;
+		}
+
+		.logo {
+			margin: 4% 8%;
+
+			&__fa-solid {
+				top: 3%;
+			}
+		}
 	}
-
-    .logo{
-        margin: 4% 8%;
-
-        &__fa-solid{
-		    top: 3%;
-        }
-    }
 }
-
 @media (min-width: 992px) {
 	.burger-btn {
 		top: 50px;
 		right: 50px;
 	}
 
-    .logo{
-        margin: 3% 7%;
+	.logo {
+		margin: 3% 7%;
 
-        &__fa-solid{
-		    top: 4%;
-        }
-    }
+		&__fa-solid {
+			top: 4%;
+		}
+	}
+
+	.nav {
+		&__link {
+			font-size: 2.2rem;
+		}
+	}
 
 	.header {
 		background-image: $brown-gradient, url('../img/stones_large.jpg');
