@@ -24,10 +24,13 @@ body {
 	position: fixed;
 	height: 100vh;
 	top: 0;
-	background-image: $brown-gradient-solid;
-	width: 50%;
+	background-image: $brown-gradient, url('../img/ocean_small.jpg');
+	background-size: cover;
+	background-position: center;
+	width: 100%;
 	z-index: 120;
-	margin-left: 50%;
+	margin-left: 0;
+	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -43,9 +46,10 @@ body {
 		display: block;
 		color: $white;
 		text-decoration: none;
-		margin: 0.3em 0;
-		padding: 0.5em 2em;
-		font-size: 2.7rem;
+		margin: 0.3em 0.2em 0;
+		padding: 0.5em 0.6em;
+		font-size: 1.8rem;
+		text-align: left;
 
 		&:hover {
 			color: $secondary-color;
@@ -200,15 +204,15 @@ body {
 		color: $main-color;
 		font-weight: bold;
 		z-index: 6;
-        letter-spacing: 2px;
-        padding: 0.5em 0.3em;
+		letter-spacing: 2px;
+		padding: 0.5em 0.3em;
 	}
 	&__text {
 		width: 60%;
 		color: $dark;
 		text-align: center;
 		margin: 0 0.1em;
-        padding: 0.2em 0.1em;
+		padding: 0.2em 0.1em;
 		font-family: Dancing script, sans-serif;
 		line-height: 3rem;
 		z-index: 6;
@@ -230,51 +234,175 @@ body {
 
 	&__title {
 		margin-bottom: 0.8em;
-        color:$dark;
-        
+		color: $dark;
 
 		&__text {
 			font-style: 1rem;
 		}
 	}
 }
-.hotel{
-
-    &__title{
-        padding: 5em 1em 2em;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: $main-color ;
-    }
-    &__description{
-        font-family: Dancing Script, sans-serif;
-        color: $main-color;
-        padding: 1.4em 0.8em 6em;
-        text-align: center;
-        font-size: 2.5rem;
-    }
-
+.hotel {
+	&__title {
+		padding: 5em 1em 2em;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: $main-color;
+	}
+	&__description {
+		font-family: Dancing Script, sans-serif;
+		color: $main-color;
+		padding: 1.4em 0.8em 6em;
+		text-align: center;
+		font-size: 2.5rem;
+	}
 }
-.hotel__photo  {
+.hotel__photo {
 	position: relative;
-    padding: 12em 6em;
-    text-align: center;
-    @include heroImages('../img/pool_small.jpg');
-    overflow: hidden;
+	padding: 12em 6em;
+	text-align: center;
+	@include heroImages('../img/pool_small.jpg');
+	overflow: hidden;
+	color: $light-white;
+	font-family: Dancing Script, sans-serif;
+	text-align: center;
+}
+.title2 {
+	font-size: 3.9rem;
+	padding: 2em 1em;
+}
 
-       
-    color: $light-white;
-    font-family: Dancing Script, sans-serif;
-    z-index: 300;
-    text-align: center;
+.offer {
+	&__card {
+		position: relative;
+		margin: 1em 0;
+		height: 400px;
+		text-align: center;
+		perspective: 1100px;
+		color: $light-white;
+		border-radius: 15px;
 
-    &__title2{
-        font-size: 40rem;
-    }
-        }
+		cursor: pointer;
+		transition: transform 1s;
 
-    
+		&:hover {
+			.offer__card__front {
+				transform: rotateY(180deg);
+				opacity: 1;
+			}
+
+			.offer__card__back {
+				transform: rotateY(180deg);
+				opacity: 1;
+			}
+		}
+		&__front {
+			padding: 2em;
+			height: 100%;
+			border-radius: 13px;
+			background-size: cover;
+			transition: transform 1s, opacity 1s;
+
+			&--first {
+				background-image: $light-brown-gradient, url('../img/face__small.jpg');
+			}
+			&--second {
+				background-image: $light-coffee-gradient, url('../img/massage__small.jpg');
+			}
+			&--third {
+				background-image: $coffee-gradient, url('../img/foot-massage__small.jpg');
+			}
+
+			&__title {
+				font-family: Dancing Script, sans-serif;
+				font-size: 2.5rem;
+			}
+
+		
+			&__text {
+				position: absolute;
+				bottom: 30px;
+				right: 28px;
+				font-size: 1.3rem;
+				
+				i {
+					margin-right: 0.2em;
+		
+					
+				}
+			}
+		}
+
+		&__back {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-image: $dark-gradient-solid;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			opacity: 0;
+			border-radius: 15px;
+			transform: rotateY(180deg);
+			transition: transform 1s, opacity 1s;
+
+			&__title {
+				@include cardProperties;
+				top: 1.2rem;
+				font-family: 'Dancing Script';
+				font-size: 2.5rem;
+				width: 100%;
+				
+			}
+				&__list {
+					margin: 0 2.5em ;
+					width: 85%;
+					list-style: none;
+					
+				
+					
+					
+				
+					&__text {
+						padding: 0.7em;
+						font-size: 1.5rem;
+						align-items: center;
+						text-align: center;
+						color: $light-white;
+
+
+						&:last-child {
+							border-bottom: none;
+						}
+					}
+
+					&__btn {
+						@include cardProperties;
+						bottom: 2em;
+						padding: 0.9em;
+						border-radius: 10px;
+						width: 70%;
+						border: none;
+						background-color:$honey-color;
+						cursor: pointer;
+						font-size: 1.5rem;
+						color:$dark;
+						font-weight: 600;
+
+						&::before {
+							background-color: $honey-color-hover;
+						}
+					}
+				}
+
+			
+			}
+		}
+	
+	}
+
 @media (min-width: 576px) {
 	.main {
 		&__background {

@@ -1,15 +1,21 @@
 @mixin burgerBtn {
-    position: absolute;
-    right: 0;
-    height: 3px;
-    content: '';
-    background-color: $white;
-    transition: width .4s;
+	position: absolute;
+	right: 0;
+	height: 3px;
+	content: '';
+	background-color: $white;
+	transition: width 0.4s;
 }
 
 @mixin heroImages($bgImg) {
-    background: $brown-gradient, url($bgImg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+	background: $brown-gradient, url($bgImg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+@mixin cardProperties {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
 }
