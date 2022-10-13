@@ -12,6 +12,7 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/c69c436288.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="./ccs/main.css">
 
 </head>
@@ -112,7 +113,8 @@
 
                         <div class="offer__card__front offer__card__front--first">
                             <h3 class="offer__card__front__title">Ekspresowa regeneracja</h3>
-                            <p class="offer__card__front__text"><button class="offer__card__front__details">Zobacz szczegóły</button></p>
+                            <p class="offer__card__front__text"><button class="offer__card__front__details">Zobacz
+                                    szczegóły</button></p>
 
                             <div class="offer__card__back">
                                 <h3 class="offer__card__back__title">Ekspresowa regeneracja</h3>
@@ -130,60 +132,143 @@
                         </div>
                     </div>
 
-                        <div class="offer__card" onclick="void(0)">
+                    <div class="offer__card" onclick="void(0)">
 
-                            <div class="offer__card__front offer__card__front--second">
-                                <h3 class="offer__card__front__title">Masaż relaksacyjny </h3>
-                                <p class="offer__card__front__text"><button class="offer__card__front__details">Zobacz szczegóły</button></p>
+                        <div class="offer__card__front offer__card__front--second">
+                            <h3 class="offer__card__front__title">Masaż relaksacyjny </h3>
+                            <p class="offer__card__front__text"><button class="offer__card__front__details">Zobacz
+                                    szczegóły</button></p>
 
-                                <div class="offer__card__back">
-                                    <h3 class="offer__card__back__title">Masaż relaksacyjny</h3>
-                                    <ul class="offer__card__back__list">
-                                        <li class="offer__card__back__list__text">Zmniejszanie napięcia mięśni</li>
-                                        <li class="offer__card__back__list__text">Odprężanie i głęboka relaksacja</li>
-                                        <li class="offer__card__back__list__text">Zmniejszanie poziomu stresu
-                                        </li>
-                                        <li class="offer__card__back__list__text">Zmniejszanie zmęczenia fizycznego oraz psychicznego.</li>
-                                        <li class="offer__card__back__list__text">Poprawia poziom energii</li>
-                                    </ul>
-                                    <button
-                                        class="offer__card__back__list__btn btn-special-animation">Wybierz</button>
+                            <div class="offer__card__back">
+                                <h3 class="offer__card__back__title">Masaż relaksacyjny</h3>
+                                <ul class="offer__card__back__list">
+                                    <li class="offer__card__back__list__text">Zmniejszanie napięcia mięśni</li>
+                                    <li class="offer__card__back__list__text">Odprężanie i głęboka relaksacja</li>
+                                    <li class="offer__card__back__list__text">Zmniejszanie poziomu stresu
+                                    </li>
+                                    <li class="offer__card__back__list__text">Zmniejszanie zmęczenia fizycznego oraz
+                                        psychicznego.</li>
+                                    <li class="offer__card__back__list__text">Poprawia poziom energii</li>
+                                </ul>
+                                <button class="offer__card__back__list__btn btn-special-animation">Wybierz</button>
 
-                                </div>
                             </div>
                         </div>
+                    </div>
 
-                            <div class="offer__card" onclick="void(0)">
+                    <div class="offer__card" onclick="void(0)">
 
-                                <div class="offer__card__front offer__card__front--third">
-                                    <h3 class="offer__card__front__title">Refleksologia stóp</h3>
-                                    <p class="offer__card__front__text"><button class="offer__card__front__details">Zobacz szczegóły</button></p>
+                        <div class="offer__card__front offer__card__front--third">
+                            <h3 class="offer__card__front__title">Refleksologia stóp</h3>
+                            <p class="offer__card__front__text"><button class="offer__card__front__details">Zobacz
+                                    szczegóły</button></p>
 
-                                    <div class="offer__card__back">
-                                        <h3 class="offer__card__back__title">Refleksologia stóp</h3>
-                                        <ul class="offer__card__back__list">
-                                            <li class="offer__card__back__list__text">Pomaga w problemach z kręgosłupem</li>
-                                            <li class="offer__card__back__list__text">Poprawia samopoczucie</li>
-                                            <li class="offer__card__back__list__text">Poprawia krążenie
-                                                skóry</li>
-                                            <li class="offer__card__back__list__text">Przyspiesza gojenie skóry</li>
-                                            <li class="offer__card__back__list__text">Znakomicie redukuje zmęczenie</li>
-                                        </ul>
-                                        <button
-                                            class="offer__card__back__list__btn btn-special-animation">Wybierz</button>
+                            <div class="offer__card__back">
+                                <h3 class="offer__card__back__title">Refleksologia stóp</h3>
+                                <ul class="offer__card__back__list">
+                                    <li class="offer__card__back__list__text">Pomaga w problemach z kręgosłupem</li>
+                                    <li class="offer__card__back__list__text">Poprawia samopoczucie</li>
+                                    <li class="offer__card__back__list__text">Poprawia krążenie
+                                        skóry</li>
+                                    <li class="offer__card__back__list__text">Przyspiesza gojenie skóry</li>
+                                    <li class="offer__card__back__list__text">Znakomicie redukuje zmęczenie</li>
+                                </ul>
+                                <button class="offer__card__back__list__btn btn-special-animation">Wybierz</button>
 
-                                    </div>
-                                </div>
                             </div>
                         </div>
-            </div>    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- #Attraction -->
+
+
+        <section class="opinion section__padding">
+            <h2 class="main__title"id="Opinion" >Opinie</h2>
+            <div class="wrapper">
+                <div class="opinion__boxes">
+
+                    <div class="opinion__box">
+                        <div class="opinion__box__img">
+                            <img src="img/portrait_small1.jpg" alt="Ewelina Nowak">
+                        </div>
+                        <div class="opinion__box__texts">
+                            <div class="opinion__box__icon"><i class="fa-sharp fa-solid fa-quote-right"></i><p
+                                        class="opinion__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Labore ipsam corporis magni provident. Tenetur, laborum nesciunt? Ipsum inventore
+                                    iusto tempore consectetur, molestias, expedita soluta voluptates mollitia debitis
+                                    quos voluptas quod.</p>
+                                    <strong>Ewelina Nowak</strong>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="opinion__box">
+                        <div class="opinion__box__img">
+                            <img src="img/portrait_small2.jpg" alt="Anna Nowak">
+                        </div>
+                        <div class="opinion__box__texts">
+                            <div class="opinion__box__icon"><i class="fa-sharp fa-solid fa-quote-right"></i>
+                            <p class="opinion__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Labore ipsam corporis magni provident. Tenetur, laborum nesciunt? Ipsum inventore
+                                    iusto tempore consectetur, molestias, expedita soluta voluptates mollitia debitis
+                                    quos voluptas quod.</p>
+                                    <strong>Anna Nowak</strong>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="opinion__box">
+                        <div class="opinion__box__img">
+                            <img src="img/portrait_small3.jpg" alt="Jan Kowalski">
+                        </div>
+                        <div class="opinion__box__texts">
+                            <div class="opinion__box__icon"><i class="fa-sharp  fa-solid fa-quote-right"></i><p
+                                        class="opinion__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Labore ipsam corporis magni provident. Tenetur, laborum nesciunt? Ipsum inventore
+                                    iusto tempore consectetur, molestias, expedita soluta voluptates mollitia debitis
+                                    quos voluptas quod.</p>
+                                    <strong>Jan Kowalski</strong>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opinion__box">
+                        <div class="opinion__box__img">
+                            <img src="img/portrait_small4.jpg" alt="Anna Kowalska">
+                        </div>
+                        <div class="opinion__box__texts">
+                            <div class="opinion__box__icon"><i class="fa-sharp fa-solid fa-quote-right"></i><p
+                                        class="opinion__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Labore ipsam corporis magni provident. Tenetur, laborum nesciunt? Ipsum inventore
+                                    iusto tempore consectetur, molestias, expedita soluta voluptates mollitia debitis
+                                    quos voluptas quod.</p>
+                                    <strong>Anna Kowalska</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer></footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <script src="js/slick.js"></script>
     <script src="/js/main.js"></script>
 </body>
 

@@ -406,8 +406,8 @@ body {
   background-image: linear-gradient(to bottom left, rgba(65, 40, 23, 0.934), rgba(82, 47, 16, 0.753)), url("../img/massage__small.jpg");
 }
 .offer__card__front--third {
-  background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(135, 59, 40, 0.899)), to(rgba(105, 62, 22, 0.937))), url("../img/foot-massage__small.jpg");
-  background-image: linear-gradient(to bottom left, rgba(135, 59, 40, 0.899), rgba(105, 62, 22, 0.937)), url("../img/foot-massage__small.jpg");
+  background-image: -webkit-gradient(linear, right top, left bottom, from(rgba(135, 59, 40, 0.837)), to(rgba(105, 62, 22, 0.881))), url("../img/foot-massage__small.jpg");
+  background-image: linear-gradient(to bottom left, rgba(135, 59, 40, 0.837), rgba(105, 62, 22, 0.881)), url("../img/foot-massage__small.jpg");
 }
 .offer__card__front__title {
   font-family: Dancing Script, sans-serif;
@@ -499,6 +499,42 @@ body {
 }
 .offer__card__back__list__btn::before {
   background-color: #f3e1c4;
+}
+
+.opinion__box {
+  position: relative;
+  margin: 2em;
+  padding: 2em;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 11px rgba(40, 39, 39, 0.2117647059);
+          box-shadow: 3px 3px 11px rgba(40, 39, 39, 0.2117647059);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.opinion__box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.opinion__box__img {
+  position: absolute;
+  top: 4%;
+  left: 90%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.opinion__box__img img {
+  width: 90px;
+  height: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.opinion__text {
+  margin-bottom: 1em;
+  font-size: 2rem;
+  color: #363131;
 }
 
 @media (min-width: 576px) {
