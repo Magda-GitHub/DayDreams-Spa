@@ -504,13 +504,16 @@ body {
   background-color: #f3e1c4;
 }
 
+.opinion__boxes {
+  padding: 2em 3em;
+}
 .opinion__box {
   position: relative;
-  margin: 2em 0 5em;
-  padding: 2em;
+  margin: 3em 0 2em;
+  padding: 3em 2em 1em 2em;
   border-radius: 10px;
-  -webkit-box-shadow: 3px 3px 11px rgba(40, 39, 39, 0.2117647059);
-          box-shadow: 3px 3px 11px rgba(40, 39, 39, 0.2117647059);
+  -webkit-box-shadow: 4px 4px 12px rgba(40, 39, 39, 0.2117647059);
+          box-shadow: 4px 4px 12px rgba(40, 39, 39, 0.2117647059);
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
@@ -523,7 +526,7 @@ body {
 .opinion__box__img {
   position: absolute;
   top: 4%;
-  left: 87%;
+  left: 82%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -542,7 +545,7 @@ body {
 
 .contact {
   position: relative;
-  background-image: radial-gradient(rgba(66, 58, 50, 0.46), rgba(46, 27, 10, 0.849)), url("../img/marble-large.jpg");
+  background-image: radial-gradient(rgba(71, 55, 39, 0.418), rgba(47, 27, 10, 0.73)), url("../img/marble-large.jpg");
   height: 100vh;
   width: 100%;
   background-size: 100%;
@@ -585,7 +588,7 @@ body {
   border-radius: 2px;
   border: black 2px;
   font-size: 1.5rem;
-  background-color: rgba(40, 40, 39, 0.5843137255);
+  background-color: rgba(49, 42, 34, 0.5843137255);
   color: #f3e1c4;
 }
 .contact__form__textarea {
@@ -594,7 +597,7 @@ body {
   border-radius: 2px;
   border: black 2px;
   font-size: 1.5rem;
-  background-color: rgba(40, 40, 39, 0.5843137255);
+  background-color: rgba(49, 42, 34, 0.5843137255);
   color: #f3e1c4;
   max-width: 100%;
   min-width: 100%;
@@ -609,7 +612,7 @@ body {
   padding: 1em;
   width: 60%;
   max-width: 100%;
-  background-color: rgba(40, 40, 39, 0.5843137255);
+  background-color: rgba(49, 42, 34, 0.5843137255);
   border-radius: 2px;
   cursor: pointer;
   border: 2px;
@@ -617,6 +620,38 @@ body {
 }
 .contact__form__btn::before {
   background-color: #c5ab91;
+}
+
+.footer {
+  background-color: rgba(40, 29, 18, 0.9529411765);
+  color: #c5b9ad;
+}
+.footer .wrapper {
+  padding: 4em 2em 2em;
+}
+.footer__box {
+  font-size: 1.2rem;
+}
+.footer__box__desktop {
+  display: none;
+}
+.footer__box__title {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.footer__box__social {
+  margin: 2em 0 1em;
+}
+.footer__box__link {
+  color: #c5b9ad;
+  font-size: 3.5rem;
+  padding: 3em 0.2em 0 0.1em;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.footer__box__link:hover {
+  color: rgba(222, 185, 115, 0.9019607843);
 }
 
 @media (min-width: 576px) {

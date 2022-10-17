@@ -401,12 +401,16 @@ body {
 }
 
 .opinion {
+    &__boxes{
+        padding: 2em 3em;
+
+    }
 	&__box {
 		position: relative;
-		margin: 2em 0 5em;
-		padding: 2em;
+		margin: 3em 0 2em;
+		padding: 3em 2em 1em 2em;
 		border-radius: 10px;
-		box-shadow: 3px 3px 11px #28272736;
+		box-shadow: 4px 4px 12px #28272736;
 		transition: transform 0.3s;
 
 		&:hover {
@@ -416,7 +420,7 @@ body {
 	&__box__img {
 		position: absolute;
 		top: 4%;
-		left: 87%;
+		left: 82%;
 		transform: translate(-50%, -50%);
 
 		img {
@@ -501,6 +505,45 @@ body {
 	}
 
 
+    }
+
+    .footer{
+        background-color: $darkness-solid;
+        color:$light-cream;
+
+        .wrapper{
+            padding: 4em 2em 2em;
+        }
+
+        &__box{
+            font-size: 1.2rem;
+        }
+
+        &__box__desktop{
+            display: none;
+
+        }
+
+        &__box__title{
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+
+        &__box__social{
+            margin: 2em 0 1em;
+        }
+
+        &__box__link{
+            color:$light-cream;
+            font-size: 3.5rem;
+            padding: 3em 0.2em 0 0.1em;
+            transition: color .3s;
+
+            &:hover{
+                color: $honey-color;
+            }
+        }
     }
 
 @media (min-width: 576px) {
