@@ -86,7 +86,7 @@ body {
   position: fixed;
   height: 100vh;
   top: 0;
-  background-image: linear-gradient(45deg, rgba(105, 84, 69, 0.237), rgba(53, 33, 14, 0.812)), url("../img/ocean_small.jpg");
+  background-image: linear-gradient(45deg, rgba(66, 58, 50, 0.342), rgba(46, 27, 10, 0.812)), url("../img/ocean_small.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -175,7 +175,7 @@ body {
 .black__bars,
 .black__bars::after,
 .black__bars::before {
-  background-color: #363131;
+  background-color: black;
 }
 
 .header {
@@ -197,7 +197,7 @@ body {
   height: 70vh;
   text-align: center;
   color: #fff;
-  background: linear-gradient(45deg, rgba(105, 84, 69, 0.237), rgba(53, 33, 14, 0.812)), url("../img/stones_small.jpg");
+  background: linear-gradient(45deg, rgba(66, 58, 50, 0.342), rgba(46, 27, 10, 0.812)), url("../img/stones_small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -255,8 +255,9 @@ body {
 }
 
 .main__background {
-  background-image: url("../img/marble-small.jpg");
-  width: 100%;
+  background-image: radial-gradient(rgba(220, 209, 190, 0.112), rgba(220, 211, 199, 0.315)), url("../img/marble-small.jpg");
+  background-position: bottom center;
+  background-size: auto;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -271,13 +272,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 70vh;
-  margin: 2em 0.3em 0;
-  padding: 0.2em;
+  margin: 3em 2em 1em 2em;
+  border-radius: 6px;
 }
 .main__title {
   text-align: center;
-  margin: 3em 0 1.5em;
+  margin: 0.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -291,15 +291,15 @@ body {
   color: #5b4531;
   font-weight: bold;
   z-index: 6;
-  letter-spacing: 2px;
-  padding: 0.5em 0.3em;
+  letter-spacing: 1px;
+  padding: 0.4em 0.7em;
 }
 .main__text {
   width: 60%;
   color: #363131;
   text-align: center;
   margin: 0 0.1em;
-  padding: 0.2em 0.1em;
+  padding: 0.2em 0.1em 0.6em 0.1em;
   font-family: Dancing script, sans-serif;
   line-height: 3rem;
   z-index: 6;
@@ -321,15 +321,17 @@ body {
   margin-bottom: 0.4em;
 }
 .relax__title {
-  margin-bottom: 0.8em;
+  margin: 1em 0;
   color: #363131;
 }
-.relax__title__text {
-  font-style: 1rem;
+.relax__text {
+  font-size: 1.2rem;
+  margin: 1em 0;
+  line-height: 1.5em;
 }
 
 .hotel__title {
-  padding: 5em 1em 2em;
+  padding: 3em 1em 2em;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -338,16 +340,17 @@ body {
 .hotel__description {
   font-family: Dancing Script, sans-serif;
   color: #5b4531;
-  padding: 1.4em 0.8em 6em;
+  padding: 0.7em 0.8em 6em;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
+  line-height: 1.4em;
 }
 
 .hotel__photo {
   position: relative;
   padding: 12em 6em;
   text-align: center;
-  background: linear-gradient(45deg, rgba(105, 84, 69, 0.237), rgba(53, 33, 14, 0.812)), url("../img/pool_small.jpg");
+  background: linear-gradient(45deg, rgba(66, 58, 50, 0.342), rgba(46, 27, 10, 0.812)), url("../img/pool_small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -503,7 +506,7 @@ body {
 
 .opinion__box {
   position: relative;
-  margin: 2em;
+  margin: 2em 0 5em;
   padding: 2em;
   border-radius: 10px;
   -webkit-box-shadow: 3px 3px 11px rgba(40, 39, 39, 0.2117647059);
@@ -520,13 +523,13 @@ body {
 .opinion__box__img {
   position: absolute;
   top: 4%;
-  left: 90%;
+  left: 87%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 .opinion__box__img img {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
@@ -537,11 +540,90 @@ body {
   color: #363131;
 }
 
+.contact {
+  position: relative;
+  background-image: radial-gradient(rgba(66, 58, 50, 0.46), rgba(46, 27, 10, 0.849)), url("../img/marble-large.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: 100%;
+  text-align: center;
+}
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 4em 0 4em;
+}
+.contact__form__required__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex-start;
+          flex-direction: flex-start;
+  padding: 0 0 0.6em;
+  font-size: 1.2rem;
+}
+.contact__form__box__title {
+  padding: 1.5em 0 0.4em 0;
+  font-size: 3rem;
+  font-family: Dancing Script;
+  font-stretch: expanded;
+}
+.contact__form__box__text {
+  padding: 0 0 5em 0;
+  font-size: 1rem;
+}
+.contact__form__input {
+  margin-bottom: 2em;
+  padding: 0.7em 1.2em;
+  border-radius: 2px;
+  border: black 2px;
+  font-size: 1.5rem;
+  background-color: rgba(40, 40, 39, 0.5843137255);
+  color: #f3e1c4;
+}
+.contact__form__textarea {
+  margin-bottom: 2em;
+  padding: 0.7em 1.2em;
+  border-radius: 2px;
+  border: black 2px;
+  font-size: 1.5rem;
+  background-color: rgba(40, 40, 39, 0.5843137255);
+  color: #f3e1c4;
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  min-height: 100px;
+  max-height: 200px;
+  font-size: 1.6rem;
+}
+.contact__form__btn {
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding: 1em;
+  width: 60%;
+  max-width: 100%;
+  background-color: rgba(40, 40, 39, 0.5843137255);
+  border-radius: 2px;
+  cursor: pointer;
+  border: 2px;
+  margin: 1.7em;
+}
+.contact__form__btn::before {
+  background-color: #c5ab91;
+}
+
 @media (min-width: 576px) {
   .main__background {
-    height: 50vh;
-    margin: 1em 0.3em 1em;
+    height: 60vh;
     padding: 0 0 0.5em;
+    margin: 3em 5em 0 5em;
   }
   .main__text {
     font-style: 15em;
@@ -640,7 +722,7 @@ body {
     font-size: 2.2rem;
   }
   .header {
-    background-image: linear-gradient(45deg, rgba(105, 84, 69, 0.237), rgba(53, 33, 14, 0.812)), url("../img/stones_large.jpg");
+    background-image: linear-gradient(45deg, rgba(66, 58, 50, 0.342), rgba(46, 27, 10, 0.812)), url("../img/stones_large.jpg");
   }
   .header__heading {
     font-size: 9rem;

@@ -111,7 +111,7 @@ body {
 .black__bars,
 .black__bars::after,
 .black__bars::before {
-	background-color: $dark;
+	background-color: $black;
 }
 
 .header {
@@ -182,21 +182,21 @@ body {
 
 .main {
 	&__background {
-		background-image: url('../img/marble-small.jpg');
-		width: 100%;
+		background-image: $light-honey-gradient, url('../img/marble-small.jpg');
+		background-position: bottom center;
+		background-size: auto;
 		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		height: 70vh;
-		margin: 2em 0.3em 0;
-		padding: 0.2em;
+		margin: 3em 2em 1em 2em;
+		border-radius: 6px;
 	}
 
 	&__title {
 		text-align: center;
-		margin: 3em 0 1.5em;
+		margin: 0.5em;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -204,15 +204,15 @@ body {
 		color: $main-color;
 		font-weight: bold;
 		z-index: 6;
-		letter-spacing: 2px;
-		padding: 0.5em 0.3em;
+		letter-spacing: 1px;
+		padding: 0.4em 0.7em;
 	}
 	&__text {
 		width: 60%;
 		color: $dark;
 		text-align: center;
 		margin: 0 0.1em;
-		padding: 0.2em 0.1em;
+		padding: 0.2em 0.1em 0.6em 0.1em;
 		font-family: Dancing script, sans-serif;
 		line-height: 3rem;
 		z-index: 6;
@@ -224,6 +224,7 @@ body {
 	&__box {
 		display: flex;
 		flex-direction: column;
+
 		margin-bottom: 1em;
 
 		&__img {
@@ -233,17 +234,19 @@ body {
 	}
 
 	&__title {
-		margin-bottom: 0.8em;
+		margin: 1em 0;
 		color: $dark;
-
-		&__text {
-			font-style: 1rem;
-		}
+	}
+	&__text {
+		font-size: 1.2rem;
+		margin: 1em 0;
+		line-height: 1.5em;
 	}
 }
+
 .hotel {
 	&__title {
-		padding: 5em 1em 2em;
+		padding: 3em 1em 2em;
 		text-align: center;
 		text-transform: uppercase;
 		letter-spacing: 2px;
@@ -252,9 +255,10 @@ body {
 	&__description {
 		font-family: Dancing Script, sans-serif;
 		color: $main-color;
-		padding: 1.4em 0.8em 6em;
+		padding: 0.7em 0.8em 6em;
 		text-align: center;
-		font-size: 2.5rem;
+		font-size: 1.8rem;
+		line-height: 1.4em;
 	}
 }
 .hotel__photo {
@@ -396,54 +400,115 @@ body {
 	}
 }
 
-
-.opinion{
-	&__box{
+.opinion {
+	&__box {
 		position: relative;
-		margin: 2em;
+		margin: 2em 0 5em;
 		padding: 2em;
 		border-radius: 10px;
 		box-shadow: 3px 3px 11px #28272736;
-		transition: transform .3s;
+		transition: transform 0.3s;
 
-		&:hover{
+		&:hover {
 			transform: scale(1.1);
 		}
-
-
 	}
-		&__box__img{
-			position: absolute;
-			top:4%;
-			left: 90%;
-			transform: translate(-50%, -50%);
+	&__box__img {
+		position: absolute;
+		top: 4%;
+		left: 87%;
+		transform: translate(-50%, -50%);
 
-	
 		img {
-			width: 90px;
-			height: 90px;
+			width: 80px;
+			height: 80px;
 			object-fit: cover;
 			border-radius: 50%;
 		}
 	}
 
-	
-	&__text{
-
-	margin-bottom: 1em;
-	font-size: 2rem;
-	color: $dark;
-
-
+	&__text {
+		margin-bottom: 1em;
+		font-size: 2rem;
+		color: $dark;
 	}
 }
+
+.contact {
+	position: relative;
+	background-image: $darkness-gradient, url('../img/marble-large.jpg');
+	height: 100vh;
+	width: 100%;
+	background-size: 100%;
+	text-align: center;
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+        padding: 0 4em 0  4em;
+
+        &__required__text{
+            display: flex;
+            flex-direction: flex-start;
+            padding: 0 0 0.6em;
+            font-size: 1.2rem;
+        }
+
+        &__box{
+            &__title{
+            padding: 1.5em 0 0.4em 0;
+            font-size: 3rem;
+            font-family: Dancing Script;
+            font-stretch: expanded;
+            }
+            &__text{
+                padding: 0 0 5em 0;
+                font-size: 1rem;
+            }
+
+        }
+		&__input {
+			@include formContact;
+            
+		}
+
+		&__textarea {
+			@include formContact;
+			max-width: 100%;
+			min-width: 100%;
+			width: 100%;
+			min-height: 100px;
+			max-height: 200px;
+			font-size: 1.6rem;
+            
+		}
+
+        &__btn{
+            align-self: center;
+            padding: 1em;
+            width: 60%;
+            max-width: 100%;
+            background-color: $darkness;
+            border-radius: 2px;
+            cursor: pointer;
+            border: 2px;
+            margin: 1.7em;
+
+            &::before{
+                background-color: $light-light-brown;
+            }
+        }
+	}
+
+
+    }
 
 @media (min-width: 576px) {
 	.main {
 		&__background {
-			height: 50vh;
-			margin: 1em 0.3em 1em;
+			height: 60vh;
 			padding: 0 0 0.5em;
+			margin: 3em 5em 0 5em;
 		}
 
 		&__text {
@@ -535,9 +600,8 @@ body {
 			&__back {
 				padding: 1em;
 
-				&__list{
-					&__btn{
-						
+				&__list {
+					&__btn {
 						padding: 0.7em 1.4em;
 					}
 				}
@@ -596,7 +660,4 @@ body {
 		font-style: 35em;
 		margin: 2em 6.5em;
 	}
-
-
-
 }
