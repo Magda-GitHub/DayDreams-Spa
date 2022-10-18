@@ -401,10 +401,9 @@ body {
 }
 
 .opinion {
-    &__boxes{
-        padding: 2em 3em;
-
-    }
+	&__boxes {
+		padding: 2em 3em;
+	}
 	&__box {
 		position: relative;
 		margin: 2em 0 2em;
@@ -441,39 +440,38 @@ body {
 .contact {
 	position: relative;
 	background-image: $darkness-gradient, url('../img/marble-large.jpg');
-	height: 100vh;
+	height: 100%;
 	width: 100%;
 	background-size: 100%;
 	text-align: center;
+    padding: 0 0 1em 0;
 
 	&__form {
 		display: flex;
 		flex-direction: column;
-        padding: 0 1em;
+		padding: 0 1em;
 
-        &__required__text{
-            display: flex;
-            flex-direction: flex-start;
-            padding: 0 0 0.6em;
-            font-size: 1.2rem;
-        }
+		&__required__text {
+			display: flex;
+			flex-direction: flex-start;
+			padding: 0 0 0.6em;
+			font-size: 1.2rem;
+		}
 
-        &__box{
-            &__title{
-            padding: 1.5em 0 0.4em 0;
-            font-size: 3rem;
-            font-family: Dancing Script;
-            font-stretch: expanded;
-            }
-            &__text{
-                padding: 0 0 5em 0;
-                font-size: 1rem;
-            }
-
-        }
+		&__box {
+			&__title {
+				padding: 1.5em 0 0.4em 0;
+				font-size: 3rem;
+				font-family: Dancing Script;
+				font-stretch: expanded;
+			}
+			&__text {
+				padding: 0 0 5em 0;
+				font-size: 1rem;
+			}
+		}
 		&__input {
 			@include formContact;
-            
 		}
 
 		&__textarea {
@@ -484,92 +482,88 @@ body {
 			min-height: 100px;
 			max-height: 200px;
 			font-size: 1.6rem;
-            
 		}
 
-        &__btn{
-            align-self: center;
-            padding: 1em;
-            width: 60%;
-            max-width: 100%;
-            background-color: $darkness;
-            border-radius: 2px;
-            cursor: pointer;
-            border: 2px;
-            margin: 1.7em;
+		&__btn {
+			align-self: center;
+			padding: 1em;
+			width: 60%;
+			max-width: 100%;
+			background-color: $darkness;
+			border-radius: 2px;
+			cursor: pointer;
+			border: 2px;
+			margin: 1.7em;
 
-            &::before{
-                background-color: $light-light-brown;
-            }
-        }
+			&::before {
+				background-color: $light-light-brown;
+			}
+		}
+	}
+}
+
+.footer {
+	background-color: $darkness-solid;
+	color: $light-cream;
+
+	.wrapper {
+		padding: 4em 2em 1.5em;
+		display: flex;
+		justify-content: center;
+		text-align: center;
 	}
 
+	&__box {
+		font-size: 1.2rem;
 
-    }
+		&__brand__title {
+			padding: 1em;
+		}
+	}
 
-    .footer{
-        background-color: $darkness-solid;
-        color:$light-cream;
+	&__box__title {
+		margin-bottom: 2rem;
+		font-size: 2rem;
+		text-transform: uppercase;
+	}
 
-        .wrapper{
-            padding: 4em 2em 1.5em;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-        }
+	&__box__social {
+		margin: 2em 0 1em;
+	}
 
-        &__box{
-            font-size: 1.2rem;
+	&__box__link {
+		color: $light-cream;
+		font-size: 3rem;
+		padding: 3em 0.7em 0 0.7em;
+		transition: color 0.3s;
 
-            &__brand__title{
-                padding: 1em;
-            }
-        }
+		&:hover {
+			color: $honey-color;
+		}
+	}
 
+	&__box__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		padding: 1em 1em 2em;
+		font-size: 1rem;
+		list-style: none;
+	}
 
-        &__box__title{
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            text-transform: uppercase;
-        }
+	&__box__list__link {
+		a {
+			color: $light-cream;
+			text-decoration: none;
+			font-size: 1.2rem;
+		}
+	}
 
-        &__box__social{
-            margin: 2em 0 1em;
-        }
-
-        &__box__link{
-            color:$light-cream;
-            font-size: 3rem;
-            padding: 3em 0.2em 0 0.1em;
-            transition: color .3s;
-            
-
-            &:hover{
-                color: $honey-color;
-            }
-        }
-
-        &__box__list{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 1em 1em 2em;
-            font-size: 1rem;
-            list-style: none;
-        }
-
-        &__box__list__link{
-            a {
-                color:$light-cream;
-                text-decoration: none;
-            }
-        }
-
-        &__bottom__text{
-            text-align: center;
-            padding: 1.2em 0 1em;
-        }
-    }
+	&__bottom__text {
+		text-align: center;
+		padding: 1.2em 0 1em;
+	}
+}
 
 @media (min-width: 576px) {
 	.main {
@@ -584,7 +578,6 @@ body {
 		}
 	}
 
-    
 	.relax {
 		&__box {
 			flex-direction: row;
@@ -641,6 +634,43 @@ body {
 			}
 		}
 	}
+
+
+    .contact {
+		&__form {
+			&__required__text {
+				font-size: 1.3rem;
+			}
+
+			&__box {
+				&__title {
+					font-size: 4rem;
+					font-stretch: ultra-condensed;
+				}
+				&__text {
+					font-size: 1.2rem;
+				}
+			}
+			&__input {
+				padding: 1em 1.5em;
+				font-size: 1.7rem;
+			}
+
+			&__textarea {
+				padding: 1em 1.5em;
+				font-size: 1.7rem;
+				min-height: 200px;
+			}
+
+			&__btn {
+				padding: 1.2em;
+				font-size: 1.8rem;
+			}
+		}
+	}
+
+
+
 }
 @media (min-width: 768px) {
 	.nav {
@@ -677,6 +707,9 @@ body {
 			}
 		}
 	}
+
+    
+
 }
 @media (min-width: 992px) {
 	.burger-btn {
@@ -722,11 +755,61 @@ body {
 			}
 		}
 	}
+    
+
+
 }
 
 @media (min-width: 1200px) {
 	.main__text {
 		font-style: 35em;
 		margin: 2em 6.5em;
+	}
+
+	
+
+	.footer {
+		.wrapper {
+			padding: 5em 3em 2.5em;
+		}
+
+		&__box {
+			font-size: 2.1rem;
+
+			&__brand__title {
+				padding: 3rem;
+			}
+		}
+
+		&__box__title {
+			margin-bottom: 2em;
+			font-size: 3rem;
+			font-stretch: ultra-expanded;
+		}
+
+		&__box__link {
+			font-size: 5rem;
+			padding: 3em 1.4em 0 1.4em;
+		}
+
+		&__box__social {
+			margin: 3em 0 1em;
+		}
+
+		&__box__list {
+			padding: 1.5em 0.5em 2em 0.5em;
+			font-size: 1.2rem;
+		}
+
+		&__box__list__link {
+			a {
+				font-size: 1.8rem;
+			}
+		}
+
+		&__bottom__text {
+			padding: 1em 0 1em;
+			font-size: 1.8rem;
+		}
 	}
 }
