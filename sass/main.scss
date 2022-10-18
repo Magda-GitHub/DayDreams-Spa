@@ -407,7 +407,7 @@ body {
     }
 	&__box {
 		position: relative;
-		margin: 3em 0 2em;
+		margin: 2em 0 2em;
 		padding: 3em 2em 1em 2em;
 		border-radius: 10px;
 		box-shadow: 4px 4px 12px #28272736;
@@ -449,7 +449,7 @@ body {
 	&__form {
 		display: flex;
 		flex-direction: column;
-        padding: 0 1em ;
+        padding: 0 1em;
 
         &__required__text{
             display: flex;
@@ -512,21 +512,24 @@ body {
         color:$light-cream;
 
         .wrapper{
-            padding: 4em 2em 2em;
+            padding: 4em 2em 1.5em;
+            display: flex;
+            justify-content: center;
+            text-align: center;
         }
 
         &__box{
             font-size: 1.2rem;
+
+            &__brand__title{
+                padding: 1em;
+            }
         }
 
-        &__box__desktop{
-            display: none;
-
-        }
 
         &__box__title{
             margin-bottom: 2rem;
-            font-size: 2.5rem;
+            font-size: 2rem;
             text-transform: uppercase;
         }
 
@@ -536,13 +539,35 @@ body {
 
         &__box__link{
             color:$light-cream;
-            font-size: 3.5rem;
+            font-size: 3rem;
             padding: 3em 0.2em 0 0.1em;
             transition: color .3s;
+            
 
             &:hover{
                 color: $honey-color;
             }
+        }
+
+        &__box__list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 1em 1em 2em;
+            font-size: 1rem;
+            list-style: none;
+        }
+
+        &__box__list__link{
+            a {
+                color:$light-cream;
+                text-decoration: none;
+            }
+        }
+
+        &__bottom__text{
+            text-align: center;
+            padding: 1.2em 0 1em;
         }
     }
 
@@ -559,8 +584,7 @@ body {
 		}
 	}
 
-
-
+    
 	.relax {
 		&__box {
 			flex-direction: row;
