@@ -449,7 +449,7 @@ body {
 	&__form {
 		display: flex;
 		flex-direction: column;
-        padding: 0 4em 0  4em;
+        padding: 0 1em ;
 
         &__required__text{
             display: flex;
@@ -558,6 +558,8 @@ body {
 			font-style: 15em;
 		}
 	}
+
+
 
 	.relax {
 		&__box {
