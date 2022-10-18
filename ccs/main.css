@@ -277,7 +277,7 @@ body {
 }
 .main__title {
   text-align: center;
-  margin: 0.5em;
+  margin: 3em 0.5em 0.7em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -508,12 +508,12 @@ body {
 }
 
 .opinion__boxes {
-  padding: 2em 3em;
+  padding: 2em 1em;
 }
 .opinion__box {
   position: relative;
-  margin: 2em 0 2em;
-  padding: 3em 2em 1em 2em;
+  margin: 2em 1em 2em 1em;
+  padding: 2em 1em 2em 1em;
   border-radius: 10px;
   -webkit-box-shadow: 4px 4px 12px rgba(40, 39, 39, 0.2117647059);
           box-shadow: 4px 4px 12px rgba(40, 39, 39, 0.2117647059);

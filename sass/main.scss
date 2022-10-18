@@ -196,7 +196,7 @@ body {
 
 	&__title {
 		text-align: center;
-		margin: 0.5em;
+		margin: 3em 0.5em 0.7em ;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -402,12 +402,12 @@ body {
 
 .opinion {
 	&__boxes {
-		padding: 2em 3em;
+		padding: 2em 1em;
 	}
 	&__box {
 		position: relative;
-		margin: 2em 0 2em;
-		padding: 3em 2em 1em 2em;
+		margin: 2em 1em 2em 1em;
+		padding: 2em 1em 2em 1em;
 		border-radius: 10px;
 		box-shadow: 4px 4px 12px #28272736;
 		transition: transform 0.3s;
