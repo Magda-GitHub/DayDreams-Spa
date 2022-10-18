@@ -314,7 +314,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 3em;
 }
 .relax__box__img {
   width: 100%;
@@ -783,14 +786,25 @@ body {
   .nav .logo__fa-solid {
     top: 3%;
   }
-  .offer__card {
+  .relax__box__img {
+    width: 50%;
+    margin-bottom: 0.6em;
+  }
+  .relax__title {
+    margin: 3em 0 0 0;
+  }
+  .relax__text {
+    line-height: 2em;
+    margin: 2em 0 0 0;
+  }
+  .relax .offer__card {
     width: 45%;
     padding: 0.1em;
   }
-  .offer__card__back {
+  .relax .offer__card__back {
     padding: 1em;
   }
-  .offer__card__back__list__btn {
+  .relax .offer__card__back__list__btn {
     padding: 0.7em 1.4em;
   }
 }
@@ -819,11 +833,20 @@ body {
     font-style: 28em;
     margin: 1.3em 4em;
   }
-  .offer__card {
+  .relax__title {
+    margin: 4em 0 0 0;
+    font-size: 1.7rem;
+  }
+  .relax__text {
+    line-height: 2em;
+    margin: 3em 0 0 0;
+    font-size: 1.3rem;
+  }
+  .relax .offer__card {
     width: 33%;
     padding: 0.1em;
   }
-  .offer__card__back {
+  .relax .offer__card__back {
     padding: 1em;
   }
 }

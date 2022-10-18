@@ -224,8 +224,8 @@ body {
 	&__box {
 		display: flex;
 		flex-direction: column;
-
-		margin-bottom: 1em;
+		justify-content: center;
+		margin-bottom: 3em;
 
 		&__img {
 			width: 100%;
@@ -444,7 +444,7 @@ body {
 	width: 100%;
 	background-size: 100%;
 	text-align: center;
-    padding: 0 0 1em 0;
+	padding: 0 0 1em 0;
 
 	&__form {
 		display: flex;
@@ -635,8 +635,7 @@ body {
 		}
 	}
 
-
-    .contact {
+	.contact {
 		&__form {
 			&__required__text {
 				font-size: 1.3rem;
@@ -668,9 +667,6 @@ body {
 			}
 		}
 	}
-
-
-
 }
 @media (min-width: 768px) {
 	.nav {
@@ -691,25 +687,40 @@ body {
 		}
 	}
 
-	.offer {
-		&__card {
-			width: 45%;
-			padding: 0.1em;
+	.relax {
+		&__box {
+			&__img {
+				width: 50%;
+				margin-bottom: 0.6em;
+			}
+		}
 
-			&__back {
-				padding: 1em;
+        &__title{
+            margin: 3em 0 0 0 ;
+        }
+		&__text {
+			line-height: 2em;
+			margin: 2em 0 0 0;
+            
+		}
 
-				&__list {
-					&__btn {
-						padding: 0.7em 1.4em;
+		.offer {
+			&__card {
+				width: 45%;
+				padding: 0.1em;
+
+				&__back {
+					padding: 1em;
+
+					&__list {
+						&__btn {
+							padding: 0.7em 1.4em;
+						}
 					}
 				}
 			}
 		}
 	}
-
-    
-
 }
 @media (min-width: 992px) {
 	.burger-btn {
@@ -745,6 +756,22 @@ body {
 		margin: 1.3em 4em;
 	}
 
+
+    .relax {
+
+
+        &__title{
+            margin: 4em 0 0 0 ;
+            font-size: 1.7rem;
+        }
+		&__text {
+			line-height: 2em;
+			margin: 3em 0 0 0;
+            font-size: 1.3rem;
+            
+		}
+
+
 	.offer {
 		&__card {
 			width: 33%;
@@ -755,38 +782,26 @@ body {
 			}
 		}
 	}
-    
-
-
 }
-
+}
 @media (min-width: 1200px) {
+	.main {
+		&__background {
+			margin: 2em 1em 0 1em;
+		}
 
-
-    .main {
-        &__background {
-    
-            margin: 2em 1em 0 1em;
-        
-        }
-    
-        &__title {
-           
-            margin: 0.2em;
-            letter-spacing: 3px;
-            padding: 0.2em 0.5em;
-        }
-        &__text {
-            width: 80%;
-            line-height: 4rem;
-            font-size: 2.5rem;
-            margin: 1.5em 4.5em;
-        }
-    }
-
-	
-
-	
+		&__title {
+			margin: 0.2em;
+			letter-spacing: 3px;
+			padding: 0.2em 0.5em;
+		}
+		&__text {
+			width: 80%;
+			line-height: 4rem;
+			font-size: 2.5rem;
+			margin: 1.5em 4.5em;
+		}
+	}
 
 	.footer {
 		.wrapper {
