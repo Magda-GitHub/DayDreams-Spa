@@ -1,7 +1,7 @@
 .wrapper {
   margin: 0 auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 .btn-special-animation {
@@ -86,7 +86,7 @@ body {
   position: fixed;
   height: 100vh;
   top: 0;
-  background-image: linear-gradient(45deg, rgba(49, 38, 29, 0.438), rgba(46, 27, 10, 0.882)), url("../img/ocean_small.jpg");
+  background-image: radial-gradient(rgba(71, 55, 39, 0.418), rgba(47, 27, 10, 0.73)), url("../img/ocean_small.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -128,7 +128,7 @@ body {
 .burger-btn {
   position: fixed;
   top: 20px;
-  right: 20px;
+  right: 10px;
   padding: 1em;
   background: none;
   border: 1px solid transparent;
@@ -175,7 +175,7 @@ body {
 .black__bars,
 .black__bars::after,
 .black__bars::before {
-  background-color: black;
+  background-color: rgb(222, 213, 201);
 }
 
 .header {
@@ -210,7 +210,7 @@ body {
   padding: 0.5rem;
 }
 .header__text {
-  font-size: 1.4 rem;
+  font-size: 1.4rem;
 }
 .header__btn {
   margin-top: 2em;
@@ -244,14 +244,14 @@ body {
           align-items: center;
   display: block;
   top: 3%;
-  width: 200px;
+  width: 150px;
   left: 100px;
 }
 .logo__text {
   padding: 5% 6%;
   font-weight: normal;
-  font-size: 1.6rem;
-  margin: 10% -37%;
+  font-size: 1.8rem;
+  margin: 10% -25%;
 }
 
 .main__background {
@@ -323,6 +323,10 @@ body {
   width: 100%;
   margin-bottom: 0.4em;
 }
+.relax__section__relax {
+  text-align: center;
+  margin: 3em;
+}
 .relax__title {
   margin: 1em 0;
   color: #363131;
@@ -343,7 +347,7 @@ body {
 .hotel__description {
   font-family: Dancing Script, sans-serif;
   color: #5b4531;
-  padding: 0.7em 0.8em 6em;
+  padding: 0.7em 2em 6em 2em;
   text-align: center;
   font-size: 1.8rem;
   line-height: 1.4em;
@@ -382,6 +386,7 @@ body {
   transition: -webkit-transform 2s;
   transition: transform 2s;
   transition: transform 2s, -webkit-transform 2s;
+  width: 100%;
 }
 .offer__card:hover .offer__card__front {
   -webkit-transform: rotateY(-180deg);
@@ -629,6 +634,9 @@ body {
 .footer {
   background-color: rgba(40, 29, 18, 0.9529411765);
   color: #c5b9ad;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .footer .wrapper {
   padding: 4em 2em 1.5em;
@@ -640,31 +648,36 @@ body {
           justify-content: center;
   text-align: center;
 }
+.footer__boxes {
+  width: 100%;
+}
 .footer__box {
   font-size: 1.2rem;
 }
-.footer__box__brand__title {
-  padding: 1em;
-}
 .footer__box__title {
-  margin-bottom: 2rem;
   font-size: 2rem;
+  padding: 0 1em 2em 1em;
   text-transform: uppercase;
 }
-.footer__box__social {
-  margin: 2em 0 1em;
+.footer__box p {
+  font-size: 1.4rem;
+  margin: 0 0 1.5em;
 }
-.footer__box__link {
+.footer__box__social__link {
   color: #c5b9ad;
   font-size: 3rem;
   padding: 3em 0.7em 0 0.7em;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
-.footer__box__link:hover {
+.footer__box__social__link:hover {
   color: rgba(222, 185, 115, 0.9019607843);
 }
-.footer__box__list {
+.footer__box__brand__title {
+  padding: 2em 0;
+  font-size: 1.7rem;
+}
+.footer__box__brand__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -672,14 +685,13 @@ body {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 1em 1em 2em;
-  font-size: 1rem;
   list-style: none;
 }
-.footer__box__list__link a {
+.footer__box__brand__list__link a {
   color: #c5b9ad;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  padding: 1em 0.1em 0.4em 0.1em;
 }
 .footer__bottom__text {
   text-align: center;
@@ -688,12 +700,19 @@ body {
 
 @media (min-width: 576px) {
   .main__background {
-    height: 60vh;
-    padding: 0 0 0.5em;
-    margin: 3em 5em 0 5em;
+    height: 40vh;
+    padding: 0.1em 0 0.2em;
+    margin: 1em 2em 0.5em 2em;
+  }
+  .main__title {
+    margin: 2em 0.5em 0.7em;
+    padding: 0.4em 0.5em;
   }
   .main__text {
+    width: 75%;
     font-style: 15em;
+    margin: 0 0 2em;
+    padding: 0.2em 0 0.6em;
   }
   .relax__box {
     -webkit-box-orient: horizontal;
@@ -709,12 +728,12 @@ body {
     padding: 0.3em 1.2em 0 0.8em;
   }
   .relax__box__title {
-    font-size: 2.9rem;
-    margin-bottom: 0.2em;
+    font-size: 2.7rem;
+    padding: 0.1em;
   }
   .relax__box__text {
-    font-size: 1.4rem;
-    padding: 0.3em 1.9em 0.8em 1.2em;
+    font-size: 1.2rem;
+    padding: 0.1em 1.9em 0.8em 1.2em;
   }
   .offer__cards {
     display: -webkit-box;
@@ -728,6 +747,7 @@ body {
   }
   .offer__card {
     width: 50%;
+    padding: 0 0.2em;
   }
   .offer__card__back {
     padding: 1em;
@@ -759,7 +779,7 @@ body {
     font-size: 1.2rem;
   }
   .contact__form__input {
-    padding: 1em 1.5em;
+    padding: 1em 1em;
     font-size: 1.7rem;
   }
   .contact__form__textarea {
@@ -774,14 +794,14 @@ body {
 }
 @media (min-width: 768px) {
   .nav__link {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
   }
   .nav .main__text {
     font-style: 20em;
     margin: 0.8em 3em;
   }
   .nav .logo {
-    margin: 4% 8%;
+    margin: 4% 5%;
   }
   .nav .logo__fa-solid {
     top: 3%;
@@ -820,7 +840,7 @@ body {
     top: 4%;
   }
   .nav__link {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
   .header {
     background-image: linear-gradient(45deg, rgba(49, 38, 29, 0.438), rgba(46, 27, 10, 0.882)), url("../img/stones_large.jpg");
@@ -842,11 +862,11 @@ body {
     margin: 3em 0 0 0;
     font-size: 1.3rem;
   }
-  .relax .offer__card {
-    width: 33%;
+  .offer__card {
+    width: 32%;
     padding: 0.1em;
   }
-  .relax .offer__card__back {
+  .offer__card__back {
     padding: 1em;
   }
 }
@@ -865,36 +885,93 @@ body {
     font-size: 2.5rem;
     margin: 1.5em 4.5em;
   }
-  .footer .wrapper {
-    padding: 5em 3em 2.5em;
+  .offer__card {
+    width: 33%;
+    padding: 0.1em 2em;
   }
-  .footer__box {
-    font-size: 2.1rem;
+  .offer__card__back {
+    padding: 1em;
   }
-  .footer__box__brand__title {
-    padding: 3rem;
+  .contact__form {
+    padding: 0 0.1em;
+    margin: 0 2em;
+  }
+  .contact__form__required__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: flex-start;
+            flex-direction: flex-start;
+    padding: 0 0 0.6em;
+    font-size: 1.6rem;
+  }
+  .contact__form__box__title {
+    padding: 1.5em 0 0.4em 0;
+    font-size: 5rem;
+    font-stretch: extra-expanded;
+  }
+  .contact__form__box__text {
+    font-size: 1.5rem;
+  }
+  .contact__form__input {
+    margin-bottom: 1.5em;
+    padding: 1.5em 1.5em;
+    font-size: 1.7rem;
+  }
+  .contact__form__textarea {
+    margin-bottom: 2.5em;
+    padding: 1em 1.5em;
+    font-size: 1.7rem;
+    min-width: 100%;
+    width: 100%;
+    min-height: 200px;
+    font-size: 1.8rem;
+  }
+  .contact__form__btn {
+    -ms-flex-item-align: center;
+        align-self: center;
+    padding: 1em;
+    width: 60%;
+    max-width: 100%;
+    background-color: rgba(49, 42, 34, 0.5843137255);
+    border-radius: 2px;
+    cursor: pointer;
+    border: 2px;
+    margin: 1.7em;
+  }
+  .contact__form__btn::before {
+    background-color: #c5ab91;
+  }
+  .footer__boxes {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .footer__box__title {
-    margin-bottom: 2em;
-    font-size: 3rem;
-    font-stretch: ultra-expanded;
+    font-size: 2.8rem;
+    font-stretch: initial;
   }
-  .footer__box__link {
-    font-size: 5rem;
-    padding: 3em 1.4em 0 1.4em;
-  }
-  .footer__box__social {
-    margin: 3em 0 1em;
-  }
-  .footer__box__list {
-    padding: 1.5em 0.5em 2em 0.5em;
-    font-size: 1.2rem;
-  }
-  .footer__box__list__link a {
+  .footer__box p {
     font-size: 1.8rem;
+  }
+  .footer__box__social__link {
+    font-size: 4.5rem;
+    padding: 3.5em 1.2em 0;
+  }
+  .footer__box__brand__title {
+    padding: 2em 0 1.6em;
+    font-size: 2.2rem;
+  }
+  .footer__box__brand__list__link a {
+    font-size: 1.7rem;
+    padding: 1em 0 0.5em;
   }
   .footer__bottom__text {
-    padding: 1em 0 1em;
-    font-size: 1.8rem;
+    text-align: center;
+    padding: 1.2em 0;
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */

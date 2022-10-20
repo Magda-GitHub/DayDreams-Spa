@@ -20,11 +20,13 @@ body {
 	font-size: 1.6rem;
 }
 
+
+
 .nav {
 	position: fixed;
 	height: 100vh;
 	top: 0;
-	background-image: $brown-gradient, url('../img/ocean_small.jpg');
+	background-image: $darkness-gradient, url('../img/ocean_small.jpg');
 	background-size: cover;
 	background-position: center;
 	width: 100%;
@@ -60,7 +62,7 @@ body {
 .burger-btn {
 	position: fixed;
 	top: 20px;
-	right: 20px;
+	right: 10px;
 	padding: 1em;
 	background: none;
 	border: 1px solid transparent;
@@ -111,8 +113,10 @@ body {
 .black__bars,
 .black__bars::after,
 .black__bars::before {
-	background-color: $black;
+	background-color: $light-white;
 }
+
+
 
 .header {
 	position: relative;
@@ -135,7 +139,7 @@ body {
 	}
 
 	&__text {
-		font-size: 1.4 rem;
+		font-size: 1.4rem;
 	}
 
 	&__btn {
@@ -168,15 +172,15 @@ body {
 		align-items: center;
 		display: block;
 		top: 3%;
-		width: 200px;
+		width: 150px;
 		left: 100px;
 	}
 
 	&__text {
 		padding: 5% 6%;
 		font-weight: normal;
-		font-size: 1.6rem;
-		margin: 10% -37%;
+		font-size: 1.8rem;
+		margin: 10% -25%;
 	}
 }
 
@@ -196,7 +200,7 @@ body {
 
 	&__title {
 		text-align: center;
-		margin: 3em 0.5em 0.7em ;
+		margin: 3em 0.5em 0.7em;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -231,8 +235,12 @@ body {
 			width: 100%;
 			margin-bottom: 0.4em;
 		}
+        
 	}
-
+    &__section__relax{
+        text-align: center;
+        margin: 3em;
+    }
 	&__title {
 		margin: 1em 0;
 		color: $dark;
@@ -255,7 +263,7 @@ body {
 	&__description {
 		font-family: Dancing Script, sans-serif;
 		color: $main-color;
-		padding: 0.7em 0.8em 6em;
+		padding: 0.7em 2em 6em 2em;
 		text-align: center;
 		font-size: 1.8rem;
 		line-height: 1.4em;
@@ -277,6 +285,7 @@ body {
 }
 
 .offer {
+   
 	&__card {
 		position: relative;
 		margin: 2em 0;
@@ -287,6 +296,7 @@ body {
 		border-radius: 15px;
 		cursor: pointer;
 		transition: transform 2s;
+        width: 100%;
 
 		&:hover {
 			.offer__card__front {
@@ -505,6 +515,7 @@ body {
 .footer {
 	background-color: $darkness-solid;
 	color: $light-cream;
+	align-items: center;
 
 	.wrapper {
 		padding: 4em 2em 1.5em;
@@ -512,53 +523,58 @@ body {
 		justify-content: center;
 		text-align: center;
 	}
-
+	&__boxes {
+		width: 100%;
+	}
 	&__box {
 		font-size: 1.2rem;
 
-		&__brand__title {
-			padding: 1em;
+		&__title {
+			font-size: 2rem;
+			padding: 0 1em 2em 1em;
+			text-transform: uppercase;
+		}
+
+		p {
+			font-size: 1.4rem;
+			margin: 0 0 1.5em;
+		}
+
+		&__social {
+			&__link {
+				color: $light-cream;
+				font-size: 3rem;
+				padding: 3em 0.7em 0 0.7em;
+				transition: color 0.3s;
+
+				&:hover {
+					color: $honey-color;
+				}
+			}
+		}
+		&__brand {
+			&__title {
+				padding: 2em 0;
+				font-size: 1.7rem;
+			}
+
+			&__list {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				list-style: none;
+			}
+
+			&__list__link {
+				a {
+					color: $light-cream;
+					text-decoration: none;
+					font-size: 1.3rem;
+					padding: 1em 0.1em 0.4em 0.1em;
+				}
+			}
 		}
 	}
-
-	&__box__title {
-		margin-bottom: 2rem;
-		font-size: 2rem;
-		text-transform: uppercase;
-	}
-
-	&__box__social {
-		margin: 2em 0 1em;
-	}
-
-	&__box__link {
-		color: $light-cream;
-		font-size: 3rem;
-		padding: 3em 0.7em 0 0.7em;
-		transition: color 0.3s;
-
-		&:hover {
-			color: $honey-color;
-		}
-	}
-
-	&__box__list {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
-		padding: 1em 1em 2em;
-		font-size: 1rem;
-		list-style: none;
-	}
-
-	&__box__list__link {
-		a {
-			color: $light-cream;
-			text-decoration: none;
-			font-size: 1.2rem;
-		}
-	}
-
 	&__bottom__text {
 		text-align: center;
 		padding: 1.2em 0 1em;
@@ -568,16 +584,23 @@ body {
 @media (min-width: 576px) {
 	.main {
 		&__background {
-			height: 60vh;
-			padding: 0 0 0.5em;
-			margin: 3em 5em 0 5em;
+			height: 40vh;
+			padding: 0.1em 0 0.2em;
+			margin: 1em 2em 0.5em 2em;
+		}
+
+		&__title {
+			margin: 2em 0.5em 0.7em;
+			padding: 0.4em 0.5em;
 		}
 
 		&__text {
+			width: 75%;
 			font-style: 15em;
+			margin: 0 0 2em;
+			padding: 0.2em 0 0.6em;
 		}
 	}
-
 	.relax {
 		&__box {
 			flex-direction: row;
@@ -589,15 +612,16 @@ body {
 			}
 		}
 	}
+
 	.relax__box {
 		&__title {
-			font-size: 2.9rem;
-			margin-bottom: 0.2em;
+			font-size: 2.7rem;
+			padding: 0.1em;
 		}
 
 		&__text {
-			font-size: 1.4rem;
-			padding: 0.3em 1.9em 0.8em 1.2em;
+			font-size: 1.2rem;
+			padding: 0.1em 1.9em 0.8em 1.2em;
 		}
 	}
 
@@ -606,10 +630,12 @@ body {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
+         
 		}
 		&__card {
-			width: 50%;
-
+            width: 50%;
+            padding: 0 0.2em;
+			
 			&__back {
 				padding: 1em;
 				margin: 0;
@@ -651,7 +677,7 @@ body {
 				}
 			}
 			&__input {
-				padding: 1em 1.5em;
+				padding: 1em 1em;
 				font-size: 1.7rem;
 			}
 
@@ -671,7 +697,7 @@ body {
 @media (min-width: 768px) {
 	.nav {
 		&__link {
-			font-size: 1.8rem;
+			font-size: 2.1rem;
 		}
 		.main__text {
 			font-style: 20em;
@@ -679,7 +705,7 @@ body {
 		}
 
 		.logo {
-			margin: 4% 8%;
+			margin: 4% 5%;
 
 			&__fa-solid {
 				top: 3%;
@@ -695,13 +721,12 @@ body {
 			}
 		}
 
-        &__title{
-            margin: 3em 0 0 0 ;
-        }
+		&__title {
+			margin: 3em 0 0 0;
+		}
 		&__text {
 			line-height: 2em;
 			margin: 2em 0 0 0;
-            
 		}
 
 		.offer {
@@ -738,7 +763,7 @@ body {
 
 	.nav {
 		&__link {
-			font-size: 2.2rem;
+			font-size: 2.4rem;
 		}
 	}
 
@@ -756,34 +781,30 @@ body {
 		margin: 1.3em 4em;
 	}
 
-
-    .relax {
-
-
-        &__title{
-            margin: 4em 0 0 0 ;
-            font-size: 1.7rem;
-        }
+	.relax {
+		&__title {
+			margin: 4em 0 0 0;
+			font-size: 1.7rem;
+		}
 		&__text {
 			line-height: 2em;
 			margin: 3em 0 0 0;
-            font-size: 1.3rem;
-            
+			font-size: 1.3rem;
 		}
+    }
+		.offer {
+          
+			&__card {
+				width: 32%;
+				padding: 0.1em;
 
-
-	.offer {
-		&__card {
-			width: 33%;
-			padding: 0.1em;
-
-			&__back {
-				padding: 1em;
+				&__back {
+					padding: 1em;
+				}
 			}
 		}
 	}
-}
-}
+
 @media (min-width: 1200px) {
 	.main {
 		&__background {
@@ -803,48 +824,512 @@ body {
 		}
 	}
 
-	.footer {
-		.wrapper {
-			padding: 5em 3em 2.5em;
-		}
+    .offer {
+          
+        &__card {
+            width: 33%;
+            padding: 0.1em 2em;
 
-		&__box {
-			font-size: 2.1rem;
+            &__back {
+                padding: 1em;
+            }
+        }
+    }
 
-			&__brand__title {
-				padding: 3rem;
+
+
+	.contact {
+
+		&__form {
+            // display: flex;
+			// flex-wrap: wrap;
+            // justify-content: space-between;
+			padding: 0 0.1em;
+            margin: 0 2em;
+
+			&__required__text {
+				display: flex;
+				flex-direction: flex-start;
+				padding: 0 0 0.6em;
+				font-size: 1.6rem;
 			}
-		}
 
-		&__box__title {
-			margin-bottom: 2em;
-			font-size: 3rem;
-			font-stretch: ultra-expanded;
-		}
+			&__box {
 
-		&__box__link {
-			font-size: 5rem;
-			padding: 3em 1.4em 0 1.4em;
-		}
 
-		&__box__social {
-			margin: 3em 0 1em;
-		}
+				&__title {
+					padding: 1.5em 0 0.4em 0;
+					font-size: 5rem;
+					font-stretch: extra-expanded;
+				}
+				&__text {
+					font-size: 1.5rem;
+				}
+			}
+			&__input {
+				margin-bottom: 1.5em;
+				padding: 1.5em 1.5em;
+				font-size: 1.7rem;
+			}
 
-		&__box__list {
-			padding: 1.5em 0.5em 2em 0.5em;
-			font-size: 1.2rem;
-		}
+			&__textarea {
+              
+				margin-bottom: 2.5em;
+				padding: 1em 1.5em;
+				font-size: 1.7rem;
 
-		&__box__list__link {
-			a {
+				min-width: 100%;
+				width: 100%;
+				min-height: 200px;
+
 				font-size: 1.8rem;
 			}
-		}
 
+			&__btn {
+				align-self: center;
+				padding: 1em;
+				width: 60%;
+				max-width: 100%;
+				background-color: $darkness;
+				border-radius: 2px;
+				cursor: pointer;
+				border: 2px;
+				margin: 1.7em;
+
+				&::before {
+					background-color: $light-light-brown;
+				}
+			}
+		}
+	}
+
+	.footer {
+		&__boxes {
+			width: 100%;
+			justify-content: space-between;
+		}
+		&__box {
+			&__title {
+				font-size: 2.8rem;
+				font-stretch: initial;
+			}
+
+			p {
+				font-size: 1.8rem;
+			}
+
+			&__social {
+				&__link {
+					font-size: 4.5rem;
+					padding: 3.5em 1.2em 0;
+				}
+			}
+			&__brand {
+				&__title {
+					padding: 2em 0 1.6em;
+					font-size: 2.2rem;
+				}
+
+				&__list__link {
+					a {
+						font-size: 1.7rem;
+						padding: 1em 0 0.5em;
+					}
+				}
+			}
+		}
 		&__bottom__text {
-			padding: 1em 0 1em;
-			font-size: 1.8rem;
+			text-align: center;
+			padding: 1.2em 0;
+			font-size: 2rem;
 		}
 	}
 }
+
+
+// @media (min-width: 1400px){
+
+//     .main {
+
+//         &__light__section {
+//             width: 80%;
+//         }
+// 		&__background {
+//             width: 115%;
+// 			margin: 7em;
+// 		}
+
+// 		&__title {
+//             font-size: 6rem;
+			
+// 			margin: 0.5em;
+// 			padding: 0.2em 0;
+// 		}
+// 		&__text {
+// 			width: 92%;
+// 			line-height: 8rem;
+// 			font-size: 4.5rem;
+// 			margin: 1.2em 2.5em;
+// 		}
+// 	}
+
+//     .relax {
+
+//         &__section{
+            
+//             &__padding {
+//             width: 100%;
+//         }
+
+//         &__relax{
+//             font-size: 4rem;
+//         }
+//         &__box {
+//             margin-bottom: 2em;
+    
+//             &__img {
+//                 width: 80%;
+//                 margin: 1em 7em;
+//             }
+//         }
+    
+//         &__title {
+//             margin: 1em 0;
+//             font-size: 3rem;
+//         }
+//         &__text {
+//             font-size: 1.2rem;
+//             margin: 1em 0;
+//             line-height: 1.5em;
+//         }
+//     }
+// }
+//     .hotel {
+//         &__title {
+//             padding: 3em 1em 2em;
+//             text-align: center;
+//             text-transform: uppercase;
+//             letter-spacing: 2px;
+//             color: $main-color;
+//         }
+//         &__description {
+//             font-family: Dancing Script, sans-serif;
+//             color: $main-color;
+//             padding: 0.7em 2em 6em 2em;
+//             text-align: center;
+//             font-size: 1.8rem;
+//             line-height: 1.4em;
+//         }
+//     }
+//     .hotel__photo {
+//         position: relative;
+//         padding: 12em 6em;
+//         text-align: center;
+//         @include heroImages('../img/pool_small.jpg');
+//         overflow: hidden;
+//         color: $light-white;
+//         font-family: Dancing Script, sans-serif;
+//         text-align: center;
+//     }
+//     .title2 {
+//         font-size: 3.9rem;
+//         padding: 2em 1em;
+//     }
+    
+//     .offer {
+       
+//         &__card {
+//             position: relative;
+//             margin: 2em 0;
+//             height: 400px;
+//             text-align: center;
+//             perspective: 1200px;
+//             color: $light-white;
+//             border-radius: 15px;
+//             cursor: pointer;
+//             transition: transform 2s;
+//             width: 100%;
+    
+//             &:hover {
+//                 .offer__card__front {
+//                     transform: rotateY(-180deg);
+//                     opacity: 1;
+//                 }
+    
+//                 .offer__card__back {
+//                     transform: rotateY(180);
+//                     opacity: 1;
+//                 }
+//             }
+//             &__front {
+//                 padding: 2em;
+//                 height: 100%;
+//                 border-radius: 13px;
+//                 background-size: cover;
+//                 transition: transform 2s, opacity 1s;
+//                 width: 100%;
+    
+//                 &--first {
+//                     background-image: $light-brown-gradient, url('../img/face__small.jpg');
+//                 }
+//                 &--second {
+//                     background-image: $light-coffee-gradient, url('../img/massage__small.jpg');
+//                 }
+//                 &--third {
+//                     background-image: $coffee-gradient, url('../img/foot-massage__small.jpg');
+//                 }
+    
+//                 &__title {
+//                     font-family: Dancing Script, sans-serif;
+//                     font-size: 2.9rem;
+//                     top: 1.2em;
+//                 }
+    
+//                 &__details {
+//                     border: none;
+//                     margin-top: 20em;
+//                     padding: 0.8em 1.6em;
+//                     background: $light-brown;
+//                     border-radius: 5px;
+//                     color: $dark;
+//                     cursor: pointer;
+    
+//                     &::before {
+//                         background-color: $light-white;
+//                     }
+//                 }
+//             }
+    
+//             &__back {
+//                 position: absolute;
+//                 top: 0;
+//                 bottom: 0;
+//                 left: 0;
+//                 right: 0;
+//                 padding: 2em;
+//                 background-image: $dark-gradient-solid;
+//                 display: flex;
+//                 justify-content: center;
+//                 flex-direction: column;
+//                 opacity: 0;
+//                 border-radius: 15px;
+//                 transform: rotateY(180deg);
+//                 transition: transform 1s, opacity 1s;
+    
+//                 &__title {
+//                     @include cardProperties;
+//                     top: 1.2rem;
+//                     font-family: 'Dancing Script';
+//                     font-size: 2.9rem;
+//                     width: 100%;
+//                 }
+//                 &__list {
+//                     margin: 0 2em;
+//                     width: 85%;
+//                     list-style: none;
+    
+//                     &__text {
+//                         padding: 0.7em;
+//                         font-size: 1.5rem;
+//                         align-items: center;
+//                         text-align: center;
+//                         color: $light-white;
+    
+//                         &:last-child {
+//                             border-bottom: none;
+//                         }
+//                     }
+    
+//                     &__btn {
+//                         @include cardProperties;
+//                         bottom: 2em;
+//                         padding: 0.9em;
+//                         border-radius: 8px;
+//                         width: 70%;
+//                         border: none;
+//                         background-color: $honey-color;
+//                         cursor: pointer;
+//                         font-size: 1.5rem;
+//                         color: $dark;
+//                         font-weight: 600;
+    
+//                         &::before {
+//                             background-color: $honey-color-hover;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+    
+//     .opinion {
+//         &__boxes {
+//             padding: 2em 1em;
+//         }
+//         &__box {
+//             position: relative;
+//             margin: 2em 1em 2em 1em;
+//             padding: 2em 1em 2em 1em;
+//             border-radius: 10px;
+//             box-shadow: 4px 4px 12px #28272736;
+//             transition: transform 0.3s;
+    
+//             &:hover {
+//                 transform: scale(1.1);
+//             }
+//         }
+//         &__box__img {
+//             position: absolute;
+//             top: 4%;
+//             left: 82%;
+//             transform: translate(-50%, -50%);
+    
+//             img {
+//                 width: 80px;
+//                 height: 80px;
+//                 object-fit: cover;
+//                 border-radius: 50%;
+//             }
+//         }
+    
+//         &__text {
+//             margin-bottom: 1em;
+//             font-size: 2rem;
+//             color: $dark;
+//         }
+//     }
+    
+//     .contact {
+//         position: relative;
+//         background-image: $darkness-gradient, url('../img/marble-large.jpg');
+//         height: 100%;
+//         width: 100%;
+//         background-size: 100%;
+//         text-align: center;
+//         padding: 0 0 1em 0;
+    
+//         &__form {
+//             display: flex;
+//             flex-direction: column;
+//             padding: 0 1em;
+    
+//             &__required__text {
+//                 display: flex;
+//                 flex-direction: flex-start;
+//                 padding: 0 0 0.6em;
+//                 font-size: 1.2rem;
+//             }
+    
+//             &__box {
+//                 &__title {
+//                     padding: 1.5em 0 0.4em 0;
+//                     font-size: 3rem;
+//                     font-family: Dancing Script;
+//                     font-stretch: expanded;
+//                 }
+//                 &__text {
+//                     padding: 0 0 5em 0;
+//                     font-size: 1rem;
+//                 }
+//             }
+//             &__input {
+//                 @include formContact;
+//             }
+    
+//             &__textarea {
+//                 @include formContact;
+//                 max-width: 100%;
+//                 min-width: 100%;
+//                 width: 100%;
+//                 min-height: 100px;
+//                 max-height: 200px;
+//                 font-size: 1.6rem;
+//             }
+    
+//             &__btn {
+//                 align-self: center;
+//                 padding: 1em;
+//                 width: 60%;
+//                 max-width: 100%;
+//                 background-color: $darkness;
+//                 border-radius: 2px;
+//                 cursor: pointer;
+//                 border: 2px;
+//                 margin: 1.7em;
+    
+//                 &::before {
+//                     background-color: $light-light-brown;
+//                 }
+//             }
+//         }
+//     }
+    
+//     .footer {
+//         background-color: $darkness-solid;
+//         color: $light-cream;
+//         align-items: center;
+    
+//         .wrapper {
+//             padding: 4em 2em 1.5em;
+//             display: flex;
+//             justify-content: center;
+//             text-align: center;
+//         }
+//         &__boxes {
+//             width: 100%;
+//         }
+//         &__box {
+//             font-size: 1.2rem;
+    
+//             &__title {
+//                 font-size: 2rem;
+//                 padding: 0 1em 2em 1em;
+//                 text-transform: uppercase;
+//             }
+    
+//             p {
+//                 font-size: 1.4rem;
+//                 margin: 0 0 1.5em;
+//             }
+    
+//             &__social {
+//                 &__link {
+//                     color: $light-cream;
+//                     font-size: 3rem;
+//                     padding: 3em 0.7em 0 0.7em;
+//                     transition: color 0.3s;
+    
+//                     &:hover {
+//                         color: $honey-color;
+//                     }
+//                 }
+//             }
+//             &__brand {
+//                 &__title {
+//                     padding: 2em 0;
+//                     font-size: 1.7rem;
+//                 }
+    
+//                 &__list {
+//                     display: flex;
+//                     flex-wrap: wrap;
+//                     justify-content: space-around;
+//                     list-style: none;
+//                 }
+    
+//                 &__list__link {
+//                     a {
+//                         color: $light-cream;
+//                         text-decoration: none;
+//                         font-size: 1.3rem;
+//                         padding: 1em 0.1em 0.4em 0.1em;
+//                     }
+//                 }
+//             }
+//         }
+//         &__bottom__text {
+//             text-align: center;
+//             padding: 1.2em 0 1em;
+//         }
+//     }
+// }
