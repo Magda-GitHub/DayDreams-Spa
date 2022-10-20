@@ -20,8 +20,6 @@ body {
 	font-size: 1.6rem;
 }
 
-
-
 .nav {
 	position: fixed;
 	height: 100vh;
@@ -115,8 +113,6 @@ body {
 .black__bars::before {
 	background-color: $light-white;
 }
-
-
 
 .header {
 	position: relative;
@@ -232,22 +228,22 @@ body {
 		margin-bottom: 3em;
 
 		&__img {
-			width: 100%;
-			margin-bottom: 0.4em;
+			width: 90%;
+			margin: 0.5em 2em 0.5em 1.5em;
 		}
-        
 	}
-    &__section__relax{
-        text-align: center;
-        margin: 3em;
-    }
+	&__section__relax {
+		text-align: center;
+		margin: 3em 2em;
+		color: $main-color;
+	}
 	&__title {
-		margin: 1em 0;
+		margin: 1em 2em;
 		color: $dark;
 	}
 	&__text {
 		font-size: 1.2rem;
-		margin: 1em 0;
+		margin: 1em 2.5em;
 		line-height: 1.5em;
 	}
 }
@@ -285,7 +281,6 @@ body {
 }
 
 .offer {
-   
 	&__card {
 		position: relative;
 		margin: 2em 0;
@@ -296,7 +291,7 @@ body {
 		border-radius: 15px;
 		cursor: pointer;
 		transition: transform 2s;
-        width: 100%;
+		width: 100%;
 
 		&:hover {
 			.offer__card__front {
@@ -416,7 +411,7 @@ body {
 	}
 	&__box {
 		position: relative;
-		margin: 2em 1em 2em 1em;
+		margin: 3.5em 1em 2em 1em;
 		padding: 2em 1em 2em 1em;
 		border-radius: 10px;
 		box-shadow: 4px 4px 12px #28272736;
@@ -584,44 +579,44 @@ body {
 @media (min-width: 576px) {
 	.main {
 		&__background {
-			height: 40vh;
+			height: 50vh;
 			padding: 0.1em 0 0.2em;
-			margin: 1em 2em 0.5em 2em;
+			margin: 3em 2em 0.5em 2em;
 		}
 
 		&__title {
-			margin: 2em 0.5em 0.7em;
-			padding: 0.4em 0.5em;
+			margin: 0.5em 0.5em 0.1em;
+			padding: 0.2em 0.5em;
 		}
 
 		&__text {
 			width: 75%;
-			font-style: 15em;
+			font-size: 1.8rem;
 			margin: 0 0 2em;
 			padding: 0.2em 0 0.6em;
 		}
 	}
+
 	.relax {
 		&__box {
+			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 
 			&__img {
-				width: 50%;
-				padding: 0.3em 1.2em 0 0.8em;
+				width: 40%;
+				padding: 0.3em 0.1em 0;
+				margin: 0.2em 2em 0 3em;
 			}
 		}
-	}
-
-	.relax__box {
 		&__title {
-			font-size: 2.7rem;
-			padding: 0.1em;
+			font-size: 1.3rem;
+			padding: 0.1em 0 0.3em 0;
 		}
 
 		&__text {
 			font-size: 1.2rem;
-			padding: 0.1em 1.9em 0.8em 1.2em;
+			padding: 0.1em 0 0.8em 0;
 		}
 	}
 
@@ -630,12 +625,11 @@ body {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
-         
 		}
 		&__card {
-            width: 50%;
-            padding: 0 0.2em;
-			
+			width: 50%;
+			padding: 0 0.2em;
+
 			&__back {
 				padding: 1em;
 				margin: 0;
@@ -660,40 +654,40 @@ body {
 			}
 		}
 	}
+}
+.contact {
+	&__form {
+		&__required__text {
+			font-size: 1.3rem;
+		}
 
-	.contact {
-		&__form {
-			&__required__text {
-				font-size: 1.3rem;
+		&__box {
+			&__title {
+				font-size: 4rem;
+				font-stretch: ultra-condensed;
 			}
+			&__text {
+				font-size: 1.2rem;
+			}
+		}
+		&__input {
+			padding: 1em 1em;
+			font-size: 1.7rem;
+		}
 
-			&__box {
-				&__title {
-					font-size: 4rem;
-					font-stretch: ultra-condensed;
-				}
-				&__text {
-					font-size: 1.2rem;
-				}
-			}
-			&__input {
-				padding: 1em 1em;
-				font-size: 1.7rem;
-			}
+		&__textarea {
+			padding: 1em 1.5em;
+			font-size: 1.7rem;
+			min-height: 200px;
+		}
 
-			&__textarea {
-				padding: 1em 1.5em;
-				font-size: 1.7rem;
-				min-height: 200px;
-			}
-
-			&__btn {
-				padding: 1.2em;
-				font-size: 1.8rem;
-			}
+		&__btn {
+			padding: 1.2em;
+			font-size: 1.8rem;
 		}
 	}
 }
+
 @media (min-width: 768px) {
 	.nav {
 		&__link {
@@ -716,17 +710,17 @@ body {
 	.relax {
 		&__box {
 			&__img {
-				width: 50%;
+				width: 45%;
 				margin-bottom: 0.6em;
 			}
 		}
 
 		&__title {
-			margin: 3em 0 0 0;
+			margin: 3em 1em 0 1em;
 		}
 		&__text {
 			line-height: 2em;
-			margin: 2em 0 0 0;
+			margin: 2em 2em 0 1em;
 		}
 
 		.offer {
@@ -776,11 +770,21 @@ body {
 		}
 	}
 
-	.main__text {
-		font-style: 28em;
-		margin: 1.3em 4em;
-	}
+	.main {
+		&__background {
+			margin: 3em;
+			height: 50vh;
+		}
 
+		&__title {
+			margin: 0.5em;
+		}
+
+		&__text {
+			font-style: 28em;
+			margin: 1.3em 4em;
+		}
+	}
 	.relax {
 		&__title {
 			margin: 4em 0 0 0;
@@ -791,24 +795,25 @@ body {
 			margin: 3em 0 0 0;
 			font-size: 1.3rem;
 		}
-    }
-		.offer {
-          
-			&__card {
-				width: 32%;
-				padding: 0.1em;
+	}
 
-				&__back {
-					padding: 1em;
-				}
+	.offer {
+		&__card {
+			width: 32%;
+			padding: 0.1em;
+
+			&__back {
+				padding: 1em;
 			}
 		}
 	}
+}
 
 @media (min-width: 1200px) {
 	.main {
 		&__background {
-			margin: 2em 1em 0 1em;
+			margin: 4em 2em 0 1em;
+			height: 60vh;
 		}
 
 		&__title {
@@ -824,28 +829,24 @@ body {
 		}
 	}
 
-    .offer {
-          
-        &__card {
-            width: 33%;
-            padding: 0.1em 2em;
+	.offer {
+		&__card {
+			width: 33%;
+			padding: 0.1em 2em;
 
-            &__back {
-                padding: 1em;
-            }
-        }
-    }
-
-
+			&__back {
+				padding: 1em;
+			}
+		}
+	}
 
 	.contact {
-
 		&__form {
-            // display: flex;
+			// display: flex;
 			// flex-wrap: wrap;
-            // justify-content: space-between;
+			// justify-content: space-between;
 			padding: 0 0.1em;
-            margin: 0 2em;
+			margin: 0 2em;
 
 			&__required__text {
 				display: flex;
@@ -855,8 +856,6 @@ body {
 			}
 
 			&__box {
-
-
 				&__title {
 					padding: 1.5em 0 0.4em 0;
 					font-size: 5rem;
@@ -873,7 +872,6 @@ body {
 			}
 
 			&__textarea {
-              
 				margin-bottom: 2.5em;
 				padding: 1em 1.5em;
 				font-size: 1.7rem;
@@ -887,18 +885,7 @@ body {
 
 			&__btn {
 				align-self: center;
-				padding: 1em;
-				width: 60%;
-				max-width: 100%;
-				background-color: $darkness;
-				border-radius: 2px;
-				cursor: pointer;
-				border: 2px;
-				margin: 1.7em;
-
-				&::before {
-					background-color: $light-light-brown;
-				}
+				padding: 1.7em;
 			}
 		}
 	}
@@ -946,7 +933,6 @@ body {
 	}
 }
 
-
 // @media (min-width: 1400px){
 
 //     .main {
@@ -961,7 +947,7 @@ body {
 
 // 		&__title {
 //             font-size: 6rem;
-			
+
 // 			margin: 0.5em;
 // 			padding: 0.2em 0;
 // 		}
@@ -976,7 +962,7 @@ body {
 //     .relax {
 
 //         &__section{
-            
+
 //             &__padding {
 //             width: 100%;
 //         }
@@ -986,13 +972,13 @@ body {
 //         }
 //         &__box {
 //             margin-bottom: 2em;
-    
+
 //             &__img {
 //                 width: 80%;
 //                 margin: 1em 7em;
 //             }
 //         }
-    
+
 //         &__title {
 //             margin: 1em 0;
 //             font-size: 3rem;
@@ -1035,9 +1021,9 @@ body {
 //         font-size: 3.9rem;
 //         padding: 2em 1em;
 //     }
-    
+
 //     .offer {
-       
+
 //         &__card {
 //             position: relative;
 //             margin: 2em 0;
@@ -1049,13 +1035,13 @@ body {
 //             cursor: pointer;
 //             transition: transform 2s;
 //             width: 100%;
-    
+
 //             &:hover {
 //                 .offer__card__front {
 //                     transform: rotateY(-180deg);
 //                     opacity: 1;
 //                 }
-    
+
 //                 .offer__card__back {
 //                     transform: rotateY(180);
 //                     opacity: 1;
@@ -1068,7 +1054,7 @@ body {
 //                 background-size: cover;
 //                 transition: transform 2s, opacity 1s;
 //                 width: 100%;
-    
+
 //                 &--first {
 //                     background-image: $light-brown-gradient, url('../img/face__small.jpg');
 //                 }
@@ -1078,13 +1064,13 @@ body {
 //                 &--third {
 //                     background-image: $coffee-gradient, url('../img/foot-massage__small.jpg');
 //                 }
-    
+
 //                 &__title {
 //                     font-family: Dancing Script, sans-serif;
 //                     font-size: 2.9rem;
 //                     top: 1.2em;
 //                 }
-    
+
 //                 &__details {
 //                     border: none;
 //                     margin-top: 20em;
@@ -1093,13 +1079,13 @@ body {
 //                     border-radius: 5px;
 //                     color: $dark;
 //                     cursor: pointer;
-    
+
 //                     &::before {
 //                         background-color: $light-white;
 //                     }
 //                 }
 //             }
-    
+
 //             &__back {
 //                 position: absolute;
 //                 top: 0;
@@ -1115,7 +1101,7 @@ body {
 //                 border-radius: 15px;
 //                 transform: rotateY(180deg);
 //                 transition: transform 1s, opacity 1s;
-    
+
 //                 &__title {
 //                     @include cardProperties;
 //                     top: 1.2rem;
@@ -1127,19 +1113,19 @@ body {
 //                     margin: 0 2em;
 //                     width: 85%;
 //                     list-style: none;
-    
+
 //                     &__text {
 //                         padding: 0.7em;
 //                         font-size: 1.5rem;
 //                         align-items: center;
 //                         text-align: center;
 //                         color: $light-white;
-    
+
 //                         &:last-child {
 //                             border-bottom: none;
 //                         }
 //                     }
-    
+
 //                     &__btn {
 //                         @include cardProperties;
 //                         bottom: 2em;
@@ -1152,7 +1138,7 @@ body {
 //                         font-size: 1.5rem;
 //                         color: $dark;
 //                         font-weight: 600;
-    
+
 //                         &::before {
 //                             background-color: $honey-color-hover;
 //                         }
@@ -1161,7 +1147,7 @@ body {
 //             }
 //         }
 //     }
-    
+
 //     .opinion {
 //         &__boxes {
 //             padding: 2em 1em;
@@ -1173,7 +1159,7 @@ body {
 //             border-radius: 10px;
 //             box-shadow: 4px 4px 12px #28272736;
 //             transition: transform 0.3s;
-    
+
 //             &:hover {
 //                 transform: scale(1.1);
 //             }
@@ -1183,7 +1169,7 @@ body {
 //             top: 4%;
 //             left: 82%;
 //             transform: translate(-50%, -50%);
-    
+
 //             img {
 //                 width: 80px;
 //                 height: 80px;
@@ -1191,14 +1177,14 @@ body {
 //                 border-radius: 50%;
 //             }
 //         }
-    
+
 //         &__text {
 //             margin-bottom: 1em;
 //             font-size: 2rem;
 //             color: $dark;
 //         }
 //     }
-    
+
 //     .contact {
 //         position: relative;
 //         background-image: $darkness-gradient, url('../img/marble-large.jpg');
@@ -1207,19 +1193,19 @@ body {
 //         background-size: 100%;
 //         text-align: center;
 //         padding: 0 0 1em 0;
-    
+
 //         &__form {
 //             display: flex;
 //             flex-direction: column;
 //             padding: 0 1em;
-    
+
 //             &__required__text {
 //                 display: flex;
 //                 flex-direction: flex-start;
 //                 padding: 0 0 0.6em;
 //                 font-size: 1.2rem;
 //             }
-    
+
 //             &__box {
 //                 &__title {
 //                     padding: 1.5em 0 0.4em 0;
@@ -1235,7 +1221,7 @@ body {
 //             &__input {
 //                 @include formContact;
 //             }
-    
+
 //             &__textarea {
 //                 @include formContact;
 //                 max-width: 100%;
@@ -1245,7 +1231,7 @@ body {
 //                 max-height: 200px;
 //                 font-size: 1.6rem;
 //             }
-    
+
 //             &__btn {
 //                 align-self: center;
 //                 padding: 1em;
@@ -1256,19 +1242,19 @@ body {
 //                 cursor: pointer;
 //                 border: 2px;
 //                 margin: 1.7em;
-    
+
 //                 &::before {
 //                     background-color: $light-light-brown;
 //                 }
 //             }
 //         }
 //     }
-    
+
 //     .footer {
 //         background-color: $darkness-solid;
 //         color: $light-cream;
 //         align-items: center;
-    
+
 //         .wrapper {
 //             padding: 4em 2em 1.5em;
 //             display: flex;
@@ -1280,25 +1266,25 @@ body {
 //         }
 //         &__box {
 //             font-size: 1.2rem;
-    
+
 //             &__title {
 //                 font-size: 2rem;
 //                 padding: 0 1em 2em 1em;
 //                 text-transform: uppercase;
 //             }
-    
+
 //             p {
 //                 font-size: 1.4rem;
 //                 margin: 0 0 1.5em;
 //             }
-    
+
 //             &__social {
 //                 &__link {
 //                     color: $light-cream;
 //                     font-size: 3rem;
 //                     padding: 3em 0.7em 0 0.7em;
 //                     transition: color 0.3s;
-    
+
 //                     &:hover {
 //                         color: $honey-color;
 //                     }
@@ -1309,14 +1295,14 @@ body {
 //                     padding: 2em 0;
 //                     font-size: 1.7rem;
 //                 }
-    
+
 //                 &__list {
 //                     display: flex;
 //                     flex-wrap: wrap;
 //                     justify-content: space-around;
 //                     list-style: none;
 //                 }
-    
+
 //                 &__list__link {
 //                     a {
 //                         color: $light-cream;
