@@ -562,6 +562,7 @@ body {
   padding: 0 0 1em 0;
 }
 .contact__form {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -581,6 +582,7 @@ body {
           flex-direction: flex-start;
   padding: 0 0 0.6em;
   font-size: 1.2rem;
+  margin: 0.1em 1em;
 }
 .contact__form__box__title {
   padding: 1.5em 0 0.4em 0;
@@ -593,7 +595,7 @@ body {
   font-size: 1rem;
 }
 .contact__form__input {
-  margin-bottom: 2em;
+  margin: 2em 1em;
   padding: 0.8em 1.2em;
   border-radius: 2px;
   border: black 2px;
@@ -602,31 +604,31 @@ body {
   color: #f3e1c4;
 }
 .contact__form__textarea {
-  margin-bottom: 2em;
+  margin: 2em 1em;
   padding: 0.8em 1.2em;
   border-radius: 2px;
   border: black 2px;
   font-size: 1.5rem;
   background-color: rgba(49, 42, 34, 0.5843137255);
   color: #f3e1c4;
-  max-width: 100%;
-  min-width: 100%;
-  width: 100%;
-  min-height: 100px;
-  max-height: 200px;
-  font-size: 1.6rem;
+  max-width: 94%;
+  min-width: 50%;
+  min-height: 40%;
+  max-height: 50%;
+  margin: 2em 1em 1em 1em;
 }
 .contact__form__btn {
   -ms-flex-item-align: center;
       align-self: center;
-  padding: 1em;
   width: 60%;
   max-width: 100%;
   background-color: rgba(49, 42, 34, 0.5843137255);
   border-radius: 2px;
   cursor: pointer;
-  border: 2px;
-  margin: 1.7em;
+  border: 1px;
+  margin-bottom: 2em;
+  margin: 1em;
+  padding: 0.8em 1.2em;
 }
 .contact__form__btn::before {
   background-color: #c5ab91;
@@ -795,7 +797,7 @@ body {
 }
 .contact__form__btn {
   padding: 1.2em;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 @media (min-width: 768px) {
@@ -832,6 +834,45 @@ body {
   }
   .relax .offer__card__back__list__btn {
     padding: 0.7em 1.4em;
+  }
+  .contact__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .contact__form__input {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+    margin: 2% 6%;
+  }
+  .contact__form__textarea {
+    position: absolute;
+    margin: 2% 0 2% 53%;
+    min-height: 46%;
+    max-height: 65%;
+    min-width: 40%;
+    max-width: 40%;
+  }
+  .contact__form__required__text {
+    margin: 0% 50% 0 6%;
+  }
+  .contact__form__btn {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin: 2% 30% 5%;
   }
 }
 @media (min-width: 992px) {
@@ -889,7 +930,7 @@ body {
     height: 60vh;
   }
   .main__title {
-    margin: 0.2em;
+    margin: 3.8em 0 0.8em 0;
     letter-spacing: 3px;
     padding: 0.2em 0.5em;
   }
@@ -906,47 +947,20 @@ body {
   .offer__card__back {
     padding: 1em;
   }
-  .contact__form {
-    padding: 0 0.1em;
-    margin: 0 2em;
+  .opinion__boxes {
+    padding: 2em 1em;
   }
-  .contact__form__required__text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: flex-start;
-            flex-direction: flex-start;
-    padding: 0 0 0.6em;
-    font-size: 1.6rem;
+  .opinion__box {
+    margin: 3.5em 1em 2em 1em;
+    padding: 2em 1em 2em 1em;
   }
-  .contact__form__box__title {
-    padding: 1.5em 0 0.4em 0;
-    font-size: 5rem;
-    font-stretch: extra-expanded;
+  .opinion__box__img {
+    top: 2%;
+    left: 92%;
   }
-  .contact__form__box__text {
-    font-size: 1.5rem;
-  }
-  .contact__form__input {
+  .opinion__text {
     margin-bottom: 1.5em;
-    padding: 1.5em 1.5em;
-    font-size: 1.7rem;
-  }
-  .contact__form__textarea {
-    margin-bottom: 2.5em;
-    padding: 1em 1.5em;
-    font-size: 1.7rem;
-    min-width: 100%;
-    width: 100%;
-    min-height: 200px;
-    font-size: 1.8rem;
-  }
-  .contact__form__btn {
-    -ms-flex-item-align: center;
-        align-self: center;
-    padding: 1.7em;
+    font-size: 2.2rem;
   }
   .footer__boxes {
     width: 100%;
@@ -977,5 +991,14 @@ body {
     text-align: center;
     padding: 1.2em 0;
     font-size: 2rem;
+  }
+}
+@media (min-width: 1400px) {
+  .contact__form__textarea {
+    margin: 2% 10% 2% 48%;
+    min-height: 46%;
+    max-height: 65%;
+    min-width: 40%;
+    max-width: 35%;
   }
 }/*# sourceMappingURL=main.css.map */
