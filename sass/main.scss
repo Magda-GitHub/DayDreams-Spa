@@ -456,7 +456,6 @@ body {
 		display: flex;
 		flex-direction: column;
 		padding: 0 1em;
-
 		&__required__text {
 			display: flex;
 			flex-direction: flex-start;
@@ -465,6 +464,62 @@ body {
             margin: 0.1em 1em;
 		}
 
+        &__popup{
+            width: 83%;
+            height: 30vh;
+            background: $light-white;
+            border-radius: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50;
+            
+            text-align: center;
+            margin: 0 1% 0 5%;
+            color: $dark;
+            // visibility: hidden;
+            transform: translate(-1%, -1%) scale(1);
+            transition: transform 0.4s, top 0.4s;
+            
+
+            &__open-popup{
+                visibility: visible;
+                top:50%;
+                transform: translate(-1%, -1%) scale(1);
+            }
+    
+            &__img{
+                width: 100px;
+                margin-top: -30px;
+                border-radius: 70%;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+                
+            }
+
+
+            &__text{
+                padding: 5% 0 2%;
+            }
+
+            &__button{
+                width: 85%;
+                height: 5vh;
+                margin-top: 9%;
+                padding: 5% 0 10%;
+               
+                background: $darkness;
+                color: $dark;
+                border: 0;
+                outline: none;
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 2px;
+                cursor: pointer;
+                box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+                text-align: center;
+
+            }
+        }
+        
 		&__box {
 			&__title {
 				padding: 1.5em 0 0.4em 0;
@@ -507,7 +562,11 @@ body {
 			}
 		}
 	}
+    
 }
+
+
+
 
 .footer {
 	background-color: $darkness-solid;
@@ -773,8 +832,65 @@ body {
 			flex-basis: 50%;
 			margin: 2% 30% 5%;
 		}
+
+        // &__popup{
+        //     width: 83%;
+        //     height: 30vh;
+        //     background: $light-white;
+        //     border-radius: 2px;
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50;
+        //     padding: 0 1% 0 1%;
+        //     text-align: center;
+        //     margin: 0 1% 0 4%;
+        //     color: $dark;
+        //     // visibility: hidden;
+        //     transform: translate(-2%, -2%) scale(0.7);
+        //     transition: transform 0.4s, top 0.4s;
+            
+
+        //     &__open-popup{
+        //         visibility: visible;
+        //         top:50%;
+        //         transform: translate(-1%, -1%) scale(1);
+        //     }
+    
+        //     &__img{
+        //         width: 100px;
+        //         margin-top: -30px;
+        //         border-radius: 70%;
+        //         box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+                
+        //     }
+
+
+            &__text{
+                padding: 5% 0 2%;
+            }
+
+            &__button{
+                width: 90%;
+                height: 5vh;
+                margin-top: 13%;
+                padding: 5% 0 10%;
+               
+                background: $darkness;
+                color: $dark;
+                border: 0;
+                outline: none;
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 2px;
+                cursor: pointer;
+                box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+                text-align: center;
+
+            }
+        }
+
 	}
-}
+
 
 @media (min-width: 992px) {
 	.burger-btn {

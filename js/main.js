@@ -1,13 +1,23 @@
 const nav = document.querySelector('.nav');
 const navBtn = document.querySelector('.burger-btn');
-const allNavLink =document.querySelectorAll('.nav__link')
-// const navBtnBars = document.querySelector('.burger-btn__bars')
-// const sectionAll = document.querySelectorAll('.section')
-// const sectionHotel = document.querySelector('.section__hotel')
-const footerYear = document.querySelector('.footer__year')
+const allNavLink =document.querySelectorAll('.nav__link');
+const footerYear = document.querySelector('.footer__year');
+const form = document.querySelector("form");
+
+let popup = document.getElementById("popup");
+
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+
 
 const navigation = () => {
-    nav.classList.toggle('nav--activity')
+    nav?.classList.toggle('nav--activity')
 
     allNavLink.forEach(link => {
         link.addEventListener('click', () => {
@@ -17,19 +27,6 @@ const navigation = () => {
 
 }
 
-
-// const handleSection = () => {
-//     const currentSection = window.scrollY;
-
-//     sectionAll.forEach(section => {
-
-//         if (section.classList.contains('light__section') && section.offsetTop <= currentSection + 5) {
-//             navBtnBars.classList.add('black__bars__color')
-//         } else if (!section.classList.contains('light__section') && section.offsetTop <= currentSection + 5){
-//             navBtnBars.classList.remove('black-bars-color')
-//         }
-//     })
-// }
 
 
 
@@ -42,5 +39,4 @@ const handleCurrentYear = () => {
 
 
 handleCurrentYear();
-navBtn.addEventListener('click', navigation);
-// window.addEventListener('scroll', handleSection);
+navBtn?.addEventListener('click', navigation);
